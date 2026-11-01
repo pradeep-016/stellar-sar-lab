@@ -77,6 +77,7 @@ export interface Publication {
   abstract: string;
   authors?: string[];
   doi?: string;
+  bibtex?: string;
   links: {
     pdf?: string;
     poster?: string;
@@ -138,3 +139,4 @@ export interface ResearchUpdate {
     url: string;
   }[];
 }
+

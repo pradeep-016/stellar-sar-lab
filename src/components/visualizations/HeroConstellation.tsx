@@ -238,3 +238,4 @@ export const HeroConstellation: React.FC = () => {
     </div>
   );
 };
+

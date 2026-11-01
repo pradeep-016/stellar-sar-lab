@@ -29,11 +29,10 @@ export const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? 'bg-background-deep/90 backdrop-blur-md border-b border-border/80 shadow-lg shadow-black/30 py-3'
           : 'bg-transparent border-b border-border/30 py-4 md:py-5'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -72,11 +71,10 @@ export const Navbar: React.FC = () => {
                 <Link
                   key={item.href}
                   to={item.href}
-                  className={`relative px-3 py-1.5 text-sm font-medium transition-colors rounded-md ${
-                    active
+                  className={`relative px-3 py-1.5 text-sm font-medium transition-colors rounded-md ${active
                       ? 'text-white font-semibold'
                       : 'text-scientific-slate hover:text-white hover:bg-slate-800/40'
-                  }`}
+                    }`}
                 >
                   {item.label}
                   {active && (
@@ -143,11 +141,10 @@ export const Navbar: React.FC = () => {
                 <Link
                   key={item.href}
                   to={item.href}
-                  className={`flex items-center justify-between px-4 py-2.5 rounded-lg text-base font-medium transition-colors ${
-                    active
+                  className={`flex items-center justify-between px-4 py-2.5 rounded-lg text-base font-medium transition-colors ${active
                       ? 'bg-accent-blue/15 text-accent-blue font-semibold border border-accent-blue/30'
                       : 'text-scientific-slate hover:text-white hover:bg-slate-800/40'
-                  }`}
+                    }`}
                 >
                   <span>{item.label}</span>
                   {active && <span className="w-1.5 h-1.5 rounded-full bg-accent-blue" />}
@@ -186,3 +183,4 @@ export const Navbar: React.FC = () => {
     </header>
   );
 };
+

@@ -10,7 +10,7 @@ export const models: ModelRelease[] = [
     status: 'In Progress / Release Planned Upon Publication',
     isStandalone: true,
     overview:
-      'Associative Reward Model (ARM) is an empirical research reward model developed on the Qwen3-8B backbone. Unlike scalar reward models that collapse multi-faceted qualitative judgments into a single score, ARM decomposes evaluation across six structured dimensions: instruction adherence, relevance, completeness, reasoning validity, task correctness, and communication quality.',
+      "Associative Reward Model (ARM) is the founding research model developed under StellarLab on an open Qwen3-8B backbone. Unlike scalar reward models that collapse multi-faceted qualitative judgments into an uninterpretable single score, ARM decomposes evaluation across six structured dimensions: instruction adherence, relevance, completeness, reasoning validity, task correctness, and communication quality.",
     architectureDetails: {
       backbone: 'Qwen3-8B',
       quantization: '4-bit NormalFloat (NF4) base weights',
@@ -114,3 +114,4 @@ export const models: ModelRelease[] = [
 }`,
   },
 ];
+

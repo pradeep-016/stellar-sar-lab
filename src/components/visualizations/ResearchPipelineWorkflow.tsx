@@ -58,7 +58,7 @@ export const ResearchPipelineWorkflow: React.FC = () => {
       summary:
         'Execute candidate generation and automated scoring across multiple open-source backbones and process reward verifiers.',
       practices: [
-        'Run verifiable ground-truth task scoring (e.g., GSM8K math correctness, HumanEval unit tests).',
+        'Run verifiable ground-truth task scoring across standard formal reasoning benchmarks.',
         'Log all intermediate candidate scores, tokens, and verification traces.',
         'Preserve complete candidate pool distributions for post-hoc analysis.',
       ],
@@ -72,7 +72,7 @@ export const ResearchPipelineWorkflow: React.FC = () => {
         'Apply paired statistical comparisons and rigorous multiple-testing corrections across selection comparisons.',
       practices: [
         'Apply Holm-Bonferroni or FDR corrections to prevent spurious statistical claims.',
-        'Test for significant shifts between low-budget (N=8) and high-budget (N=256) regimes.',
+        'Test for significant shifts across scaling regimes and candidate pool budgets.',
         'Explicitly distinguish statistically meaningful shifts from sampling noise.',
       ],
     },
@@ -202,3 +202,4 @@ export const ResearchPipelineWorkflow: React.FC = () => {
     </div>
   );
 };
+

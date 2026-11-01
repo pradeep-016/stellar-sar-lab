@@ -58,14 +58,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         {project.empiricalFindings && (
           <div className="mb-6 p-4 rounded-xl bg-accent-blue/5 border border-accent-blue/20">
             <div className="flex items-center justify-between text-xs font-mono text-accent-blue mb-1">
-              <span>HIGHLIGHTED OBSERVATION (GSM8K)</span>
-              <span>Llama 3.1 8B • DeepSeek PRM</span>
+              <span>EMPIRICAL FINDING</span>
             </div>
-            <div className="text-xl font-bold font-mono text-white">
-              {project.empiricalFindings.highlightMetric}
-            </div>
-            <p className="text-xs text-scientific-slate mt-1 leading-relaxed">
-              Accuracy declined by 8.2% as selection budget scaled from N=8 to N=256 despite expanding proxy reward margins.
+            {project.empiricalFindings.highlightMetric && (
+              <div className="text-xl font-bold font-mono text-white mb-1">
+                {project.empiricalFindings.highlightMetric}
+              </div>
+            )}
+            <p className="text-xs text-scientific-slate leading-relaxed">
+              {project.empiricalFindings.summary}
             </p>
           </div>
         )}
@@ -119,3 +120,4 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     </Card>
   );
 };
+

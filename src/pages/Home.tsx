@@ -11,23 +11,16 @@ import { ResearchCard } from '../components/cards/ResearchCard';
 import { ProjectCard } from '../components/cards/ProjectCard';
 import { PublicationCard } from '../components/cards/PublicationCard';
 import { Badge } from '../components/common/Badge';
-import { Button } from '../components/common/Button';
 import {
   ArrowRight,
   Sparkles,
-  ShieldAlert,
-  Sliders,
-  Scale,
-  BrainCircuit,
-  Compass,
-  FileText,
-  Mail,
   ChevronRight,
+  BookOpen,
 } from 'lucide-react';
 
 export const Home: React.FC = () => {
-  const featuredProjects = projects.slice(0, 2);
-  const featuredPublication = publications[0];
+  const foundingProject = projects[0]; // ARM
+  const foundingPublication = publications[0];
   const featuredModel = models[0];
 
   return (
@@ -43,7 +36,7 @@ export const Home: React.FC = () => {
           <div className="inline-flex items-center gap-2 mb-6 animate-in fade-in duration-700">
             <span className="h-1.5 w-1.5 rounded-full bg-accent-blue animate-pulse"></span>
             <Badge variant="blue" size="md">
-              {siteConfig.statusLabel}
+              {siteConfig.foundingLabel}
             </Badge>
           </div>
 
@@ -63,38 +56,38 @@ export const Home: React.FC = () => {
           {/* Primary & Secondary CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
             <Link
-              to="/research"
+              to="/projects"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-mono text-sm font-bold bg-accent-blue text-background-deep hover:bg-sky-300 shadow-lg shadow-accent-blue/20 hover:shadow-accent-blue/35 transition-all duration-200"
             >
-              <span>Explore Research</span>
+              <span>Founding Project: ARM</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
 
             <Link
-              to="/projects"
+              to="/research"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-mono text-sm font-semibold bg-background-elevated hover:bg-slate-800 text-white border border-border hover:border-slate-600 transition-all duration-200"
             >
-              <span>Research Projects</span>
+              <span>Research Agenda</span>
             </Link>
           </div>
 
           {/* Micro Telemetry Bar */}
           <div className="mt-16 pt-8 border-t border-border/40 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left font-mono text-xs">
             <div className="p-3 bg-background-surface/50 rounded-lg border border-border/60">
+              <span className="text-scientific-muted block text-[10px]">ORGANIZATIONAL STATUS</span>
+              <span className="text-white font-semibold">Newly Established Lab</span>
+            </div>
+            <div className="p-3 bg-background-surface/50 rounded-lg border border-border/60">
+              <span className="text-scientific-muted block text-[10px]">FOUNDING RESEARCH</span>
+              <span className="text-accent-blue font-semibold">Associative Reward Model</span>
+            </div>
+            <div className="p-3 bg-background-surface/50 rounded-lg border border-border/60">
               <span className="text-scientific-muted block text-[10px]">CORE EMPIRICAL FOCUS</span>
-              <span className="text-white font-semibold">Reward Modeling & Verifiers</span>
+              <span className="text-accent-cyan font-semibold">AI Safety & Alignment</span>
             </div>
             <div className="p-3 bg-background-surface/50 rounded-lg border border-border/60">
-              <span className="text-scientific-muted block text-[10px]">TEST-TIME SEARCH</span>
-              <span className="text-white font-semibold">Best-of-N Scaling (N ≤ 256)</span>
-            </div>
-            <div className="p-3 bg-background-surface/50 rounded-lg border border-border/60">
-              <span className="text-scientific-muted block text-[10px]">RECENT ACCEPTANCE</span>
-              <span className="text-accent-cyan font-semibold">AIAS 2026 (LLA Workshop)</span>
-            </div>
-            <div className="p-3 bg-background-surface/50 rounded-lg border border-border/60">
-              <span className="text-scientific-muted block text-[10px]">CURRENT MODEL EFFORT</span>
-              <span className="text-accent-violet font-semibold">ARM (Qwen3-8B Backbone)</span>
+              <span className="text-scientific-muted block text-[10px]">FOUNDATION BACKBONE</span>
+              <span className="text-accent-violet font-semibold">Qwen3-8B (4-bit QLoRA)</span>
             </div>
           </div>
         </div>
@@ -109,20 +102,20 @@ export const Home: React.FC = () => {
                 RESEARCH PHILOSOPHY
               </Badge>
               <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight font-display">
-                Understanding Optimization Under Imperfect Objectives
+                Investigating Evaluators Under Optimization Pressure
               </h2>
               <p className="text-base text-scientific-slate leading-relaxed">
-                Increasingly capable AI models are guided and selected by learned reward functions, process verifiers, and preference proxies. However, as inference-time compute and optimization pressure scale, proxy evaluators frequently experience calibration degradation.
+                StellarLab is an independent empirical research initiative investigating AI safety and alignment. Increasingly capable language models are guided, steered, and evaluated by learned reward models and automated proxies.
               </p>
               <p className="text-base text-scientific-slate leading-relaxed">
-                StellarLab treats evaluator reliability not as a theoretical hypothesis, but as an urgent empirical science: designing controlled stress-tests, paired statistical analyses, and fine-grained multi-dimensional supervision to uncover when and why evaluators fail.
+                Our scientific agenda focuses on understanding the failure modes of learned objectives—including specification gaming, reward hacking, Goodhart divergence, and the limits of automated evaluation.
               </p>
               <div className="pt-2">
                 <Link
                   to="/about"
                   className="inline-flex items-center gap-2 text-sm font-mono font-semibold text-accent-blue hover:text-sky-300"
                 >
-                  <span>Learn about our mission & approach</span>
+                  <span>About StellarLab's mission & principles</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -143,15 +136,15 @@ export const Home: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-border/80 text-xs font-mono">
                 <div>
                   <span className="text-scientific-muted block">INVESTIGATION AXIS 1</span>
-                  <span className="text-white font-medium">Evaluator Robustness</span>
+                  <span className="text-white font-medium">Reward Modeling</span>
                 </div>
                 <div>
                   <span className="text-scientific-muted block">INVESTIGATION AXIS 2</span>
-                  <span className="text-white font-medium">Specification Gaming</span>
+                  <span className="text-white font-medium">Evaluator Reliability</span>
                 </div>
                 <div>
                   <span className="text-scientific-muted block">INVESTIGATION AXIS 3</span>
-                  <span className="text-white font-medium">Test-Time Search Limits</span>
+                  <span className="text-white font-medium">Reward Hacking Dynamics</span>
                 </div>
               </div>
             </div>
@@ -164,13 +157,13 @@ export const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge variant="blue" size="sm">
-              INTERACTIVE DEMONSTRATION
+              CONCEPTUAL VISUALIZATION
             </Badge>
             <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-3 mb-4 font-display">
               Visualizing Reward–Quality Divergence
             </h2>
             <p className="text-sm sm:text-base text-scientific-slate">
-              Explore how proxy evaluator scores decouple from ground-truth task correctness as candidate search budgets increase.
+              A conceptual illustration of Goodhart’s Law in AI alignment: how proxy reward scores can continue rising while underlying task quality decouples.
             </p>
           </div>
 
@@ -186,13 +179,13 @@ export const Home: React.FC = () => {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
               <Badge variant="blue" size="sm">
-                RESEARCH AGENDA
+                RESEARCH INTERESTS
               </Badge>
               <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-3 font-display">
-                Core Research Directions
+                Laboratory Research Directions
               </h2>
               <p className="text-base text-scientific-slate mt-2 max-w-2xl">
-                Structured investigation into reward hacking, evaluator calibration, multi-dimensional modeling, and inference-time scaling.
+                The core questions and technical agendas guiding StellarLab's empirical AI safety program.
               </p>
             </div>
 
@@ -200,7 +193,7 @@ export const Home: React.FC = () => {
               to="/research"
               className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-accent-blue hover:text-sky-300"
             >
-              <span>View All 6 Research Directions</span>
+              <span>Explore All Directions</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -213,40 +206,38 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* FEATURED PROJECTS */}
+      {/* FOUNDING PROJECT SPOTLIGHT: ARM */}
       <section className="py-20 md:py-28 border-t border-border/80 bg-background-deep/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
-              <Badge variant="emerald" size="sm">
-                SELECTED WORK
+              <Badge variant="violet" size="sm">
+                FOUNDING RESEARCH INITIATIVE
               </Badge>
               <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-3 font-display">
-                Featured Research Projects
+                StellarLab's Founding Research Project
               </h2>
               <p className="text-base text-scientific-slate mt-2 max-w-2xl">
-                Rigorous empirical investigations and open-source models produced by StellarLab.
+                StellarLab's research journey begins with the Associative Reward Model (ARM), investigating multi-dimensional preference supervision on an open Qwen3-8B backbone.
               </p>
             </div>
 
             <Link
-              to="/projects"
+              to="/projects#arm"
               className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-accent-blue hover:text-sky-300"
             >
-              <span>Full Project Portfolio</span>
+              <span>Project Specifications & Benchmarks</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {featuredProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
+          <div className="max-w-4xl mx-auto">
+            <ProjectCard project={foundingProject} />
           </div>
         </div>
       </section>
 
-      {/* RESEARCH OUTPUTS: PUBLICATION & MODEL SHOWCASE */}
+      {/* RESEARCH OUTPUTS: PUBLICATIONS & OPEN MODEL SHOWCASE */}
       <section className="py-20 md:py-28 border-t border-border/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-14">
@@ -254,36 +245,36 @@ export const Home: React.FC = () => {
               RESEARCH OUTPUTS
             </Badge>
             <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-3 font-display">
-              Publications & Open Model Releases
+              Publications in Preparation & Open Research
             </h2>
             <p className="text-base text-scientific-slate mt-2 max-w-2xl">
-              Transparent reporting of empirical findings and public release of standalone checkpoints.
+              As a newly established laboratory, StellarLab's publication portfolio is currently being established, starting with the forthcoming ARM research manuscript.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            {/* Accepted Publication */}
+            {/* Founding Manuscript in Preparation */}
             <div>
               <div className="flex items-center justify-between mb-4">
                 <span className="text-xs font-mono uppercase tracking-wider text-accent-blue font-semibold">
-                  Featured Workshop Publication
+                  Founding Research Manuscript
                 </span>
                 <Link
                   to="/publications"
                   className="text-xs font-mono text-scientific-slate hover:text-white flex items-center gap-1"
                 >
-                  <span>All publications</span>
+                  <span>Publications portfolio</span>
                   <ChevronRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
-              <PublicationCard publication={featuredPublication} />
+              <PublicationCard publication={foundingPublication} />
             </div>
 
             {/* Featured Model */}
             <div>
               <div className="flex items-center justify-between mb-4">
                 <span className="text-xs font-mono uppercase tracking-wider text-accent-violet font-semibold">
-                  Featured Open-Source Model
+                  Founding Open-Source Model
                 </span>
                 <Link
                   to="/models"
@@ -357,7 +348,7 @@ export const Home: React.FC = () => {
             Engage with StellarLab Research
           </h2>
           <p className="text-base sm:text-lg text-scientific-slate max-w-2xl mx-auto mb-10 leading-relaxed">
-            We welcome scientific discussion, independent empirical evaluation, and collaboration with researchers investigating reward modeling, test-time scaling, and evaluator reliability.
+            We welcome scientific discussion, independent empirical evaluation, and collaboration with researchers investigating reward modeling, alignment, and evaluator reliability.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

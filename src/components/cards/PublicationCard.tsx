@@ -11,11 +11,11 @@ interface PublicationCardProps {
 export const PublicationCard: React.FC<PublicationCardProps> = ({ publication }) => {
   const [copied, setCopied] = useState(false);
 
-  const bibtex = `@inproceedings{stellarlab2026evaluator,
-  title={Evaluator Reliability in Language Models Under Test-Time Scaling},
-  booktitle={AIAS 2026 Workshop on Lifelong Agents: Learning, Aligning, and Evolving (LLA)},
-  year={2026},
-  note={Accepted for poster presentation}
+  const bibtex = publication.bibtex || `@misc{stellarlab2026,
+  title={${publication.title}},
+  author={StellarLab},
+  year={${publication.year}},
+  note={Manuscript in preparation}
 }`;
 
   const copyBibtex = () => {
@@ -80,7 +80,7 @@ export const PublicationCard: React.FC<PublicationCardProps> = ({ publication })
               href={publication.links.poster}
               className="inline-flex items-center gap-1.5 text-scientific-slate hover:text-white"
             >
-              <span>Poster (LLA 2026)</span>
+              <span>Presentation / Poster</span>
             </a>
           )}
           {publication.links.code && (
@@ -117,3 +117,4 @@ export const PublicationCard: React.FC<PublicationCardProps> = ({ publication })
     </Card>
   );
 };
+

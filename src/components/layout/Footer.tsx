@@ -115,7 +115,7 @@ export const Footer: React.FC = () => {
                   to="/publications"
                   className="text-scientific-slate hover:text-accent-blue transition-colors flex items-center gap-1"
                 >
-                  <span>AIAS 2026 Poster</span>
+                  <span>Publications (In Prep)</span>
                 </Link>
               </li>
             </ul>
@@ -169,3 +169,4 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
+

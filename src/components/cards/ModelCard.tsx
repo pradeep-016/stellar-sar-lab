@@ -112,3 +112,4 @@ export const ModelCard: React.FC<ModelCardProps> = ({ model }) => {
     </Card>
   );
 };
+

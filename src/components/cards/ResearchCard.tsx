@@ -83,3 +83,4 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({ direction }) => {
     </Card>
   );
 };
+

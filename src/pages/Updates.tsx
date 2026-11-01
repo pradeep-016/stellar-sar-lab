@@ -1,7 +1,7 @@
 import React from 'react';
 import { updates } from '../data/updates';
 import { Badge } from '../components/common/Badge';
-import { Calendar, Bell, ArrowRight, Tag } from 'lucide-react';
+import { Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const Updates: React.FC = () => {
@@ -83,3 +83,4 @@ export const Updates: React.FC = () => {
     </div>
   );
 };
+
