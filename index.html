@@ -1,273 +1,51 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Stellar Safety & Alignment Research Lab — Independent research in AI safety, alignment, reward modeling, and evaluator reliability.">
-  <title>Stellar SAR Lab | AI Safety Research</title>
-  <style>
-    :root {
-      --bg: #080d18;
-      --surface: #101a2b;
-      --text: #edf2fa;
-      --muted: #a1aec2;
-      --accent: #75baff;
-      --border: #24334a;
-    }
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>StellarLab | AI Safety & Alignment Research</title>
+    <meta name="title" content="StellarLab | AI Safety & Alignment Research" />
+    <meta
+      name="description"
+      content="StellarLab is an independent research initiative investigating AI safety, reward modeling, evaluator reliability, reward hacking, and alignment."
+    />
+    <meta name="keywords" content="AI safety, alignment, reward modeling, evaluator reliability, test-time scaling, Best-of-N, reward hacking, empirical AI research, Stellar SAR Lab" />
+    <meta name="author" content="StellarLab (Stellar Safety & Alignment Research Lab)" />
+    <meta name="theme-color" content="#060913" />
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pradeep-016.github.io/stellar-sar-lab/" />
+    <meta property="og:title" content="StellarLab | AI Safety & Alignment Research" />
+    <meta
+      property="og:description"
+      content="StellarLab is an independent research initiative investigating AI safety, reward modeling, evaluator reliability, reward hacking, and alignment."
+    />
+    <meta property="og:image" content="https://pradeep-016.github.io/stellar-sar-lab/logo.png" />
 
-    html { scroll-behavior: smooth; }
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://pradeep-016.github.io/stellar-sar-lab/" />
+    <meta property="twitter:title" content="StellarLab | AI Safety & Alignment Research" />
+    <meta
+      property="twitter:description"
+      content="StellarLab is an independent research initiative investigating AI safety, reward modeling, evaluator reliability, reward hacking, and alignment."
+    />
+    <meta property="twitter:image" content="https://pradeep-016.github.io/stellar-sar-lab/logo.png" />
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: Inter, Arial, sans-serif;
-      line-height: 1.7;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(8,13,24,.94);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(12px);
-    }
-
-    nav {
-      max-width: 1150px;
-      margin: auto;
-      padding: 18px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand { font-weight: 750; letter-spacing: .4px; }
-    .brand span { color: var(--accent); }
-
-    .nav-links {
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .nav-links a:hover { color: var(--accent); }
-
-    .container { max-width: 1050px; margin: auto; padding: 0 24px; }
-
-    .hero { padding: 120px 0 105px; }
-
-    .eyebrow {
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    h1 {
-      font-size: clamp(40px, 7vw, 68px);
-      line-height: 1.12;
-      letter-spacing: -2px;
-      margin: 22px 0;
-      max-width: 850px;
-    }
-
-    h1 span { color: var(--accent); }
-
-    .hero p {
-      color: var(--muted);
-      max-width: 680px;
-      font-size: 18px;
-    }
-
-    .actions { display: flex; gap: 14px; margin-top: 32px; flex-wrap: wrap; }
-
-    .button {
-      display: inline-block;
-      padding: 11px 20px;
-      border: 1px solid var(--accent);
-      border-radius: 6px;
-      color: var(--accent);
-      font-weight: 650;
-    }
-
-    .button.primary { background: var(--accent); color: #07111f; }
-    .button:hover { opacity: .8; }
-
-    section { padding: 75px 0; border-top: 1px solid var(--border); }
-
-    .section-label {
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    h2 { font-size: 32px; margin: 10px 0 25px; }
-
-    .section-intro { color: var(--muted); max-width: 720px; margin-bottom: 30px; }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 9px;
-      padding: 25px;
-    }
-
-    .card h3 { margin-bottom: 10px; font-size: 18px; }
-    .card p { color: var(--muted); font-size: 14px; }
-
-    .tag {
-      display: inline-block;
-      color: var(--accent);
-      font-size: 12px;
-      margin-bottom: 12px;
-    }
-
-    .project-link { color: var(--accent); display: inline-block; margin-top: 15px; font-size: 14px; }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 30px 24px;
-      color: var(--muted);
-      font-size: 13px;
-      text-align: center;
-    }
-
-    @media (max-width: 650px) {
-      nav { align-items: flex-start; flex-direction: column; }
-      .nav-links { gap: 14px; }
-      .hero { padding: 80px 0; }
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <nav>
-    <a class="brand" href="#">STELLAR <span>SAR LAB</span></a>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
-      <a href="#models">Models</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-</header>
-
-<main>
-  <div class="container">
-    <div class="hero">
-      <div class="eyebrow">Independent AI Safety Research Lab</div>
-      <h1>Understanding and improving the <span>reliability of AI systems.</span></h1>
-      <p>
-        Stellar Safety & Alignment Research Lab conducts research
-        on AI safety, alignment, reward modeling, and the reliability
-        of learned evaluators in increasingly capable language models.
-      </p>
-      <div class="actions">
-        <a class="button primary" href="#research">Explore Research</a>
-        <a class="button" href="#projects">View Projects</a>
-      </div>
-    </div>
-
-    <section id="about">
-      <div class="section-label">About</div>
-      <h2>About the Lab</h2>
-      <p class="section-intro">
-        Stellar SAR Lab is an independent research initiative focused
-        on empirical questions in AI safety and alignment. We investigate
-        how learned objectives and evaluation systems behave under
-        optimization, and how their reliability can be assessed.
-      </p>
-    </section>
-
-    <section id="research">
-      <div class="section-label">Research directions</div>
-      <h2>What We Study</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Evaluator Reliability</h3>
-          <p>Investigating the reliability of learned evaluators as language models face increasing selection and optimization pressure.</p>
-        </article>
-        <article class="card">
-          <h3>Reward Modeling</h3>
-          <p>Studying reward models, preference learning, and the relationship between proxy scores and intended objectives.</p>
-        </article>
-        <article class="card">
-          <h3>AI Alignment & Safety</h3>
-          <p>Empirical investigation of alignment-related behavior, reward hacking, and evaluation robustness.</p>
-        </article>
-        <article class="card">
-          <h3>Model Evaluation</h3>
-          <p>Developing controlled evaluation methods and reproducible benchmarks for language-model behavior.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="section-label">Research projects</div>
-      <h2>Selected Work</h2>
-      <div class="grid">
-        <article class="card">
-          <span class="tag">Research project</span>
-          <h3>Evaluator Reliability Under Test-Time Scaling</h3>
-          <p>An empirical study of Best-of-N selection, learned evaluators, and reward–quality divergence.</p>
-        </article>
-        <article class="card">
-          <span class="tag">Research project</span>
-          <h3>Proxy Migration in Language Models</h3>
-          <p>Investigating mismatches between proxy reward signals and intended task objectives under selection pressure.</p>
-        </article>
-        <article class="card">
-          <span class="tag">In progress</span>
-          <h3>Associative Reward Model (ARM)</h3>
-          <p>A multi-dimensional reward-modeling project using preference supervision and Qwen3-8B.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="models">
-      <div class="section-label">Open research</div>
-      <h2>Models & Resources</h2>
-      <p class="section-intro">
-        Research models and supporting resources will be made available
-        through our Hugging Face organization as they are released.
-      </p>
-      <a class="button" href="https://huggingface.co/" target="_blank" rel="noopener noreferrer">Hugging Face</a>
-    </section>
-
-    <section id="contact">
-      <div class="section-label">Connect</div>
-      <h2>Contact</h2>
-      <p class="section-intro">
-        For research collaboration, questions, and correspondence:
-      </p>
-      <a class="project-link" href="mailto:pradeep02272002@gmail.com">pradeep02272002@gmail.com</a>
-    </section>
-  </div>
-</main>
-
-<footer>
-  © 2026 Stellar Safety & Alignment Research Lab. All rights reserved.
-</footer>
-
-</body>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-background text-scientific-light antialiased selection:bg-accent-blue/30 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
