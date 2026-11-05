@@ -7,7 +7,7 @@
 
 [![Live Site](https://img.shields.io/badge/Live_Site-GitHub_Pages-38bdf8?style=for-the-badge&logo=github)](https://pradeep-016.github.io/stellar-sar-lab/)
 [![Founding Project](https://img.shields.io/badge/Founding_Project-ARM_(Qwen3--8B)-0284c7?style=for-the-badge)](https://pradeep-016.github.io/stellar-sar-lab/#/projects)
-[![Hugging Face](https://img.shields.io/badge/Models-Hugging_Face-f59e0b?style=for-the-badge&logo=huggingface)](https://huggingface.co/StellarLab)
+[![Hugging Face](https://img.shields.io/badge/Models-Hugging_Face-f59e0b?style=for-the-badge&logo=huggingface)](https://huggingface.co/Stellar-lab)
 [![License](https://img.shields.io/badge/License-Apache_2.0-818cf8?style=for-the-badge)](LICENSE)
 
 *A newly established independent empirical research initiative investigating learned objectives, reward modeling, and evaluator reliability under optimization pressure.*
@@ -133,10 +133,11 @@ For research collaboration, technical inquiries, and correspondence:
 
 * **Contact Email:** [pradeep02272002@gmail.com](mailto:pradeep02272002@gmail.com)
 * **GitHub Repository:** [https://github.com/pradeep-016/stellar-sar-lab](https://github.com/pradeep-016/stellar-sar-lab)
-* **Hugging Face Organization:** [https://huggingface.co/StellarLab](https://huggingface.co/StellarLab)
+* **Hugging Face Organization:** [https://huggingface.co/Stellar-lab](https://huggingface.co/Stellar-lab)
+* **Researcher Profile (Pradeep L):** [https://huggingface.co/Pradeep016](https://huggingface.co/Pradeep016)
 
 ---
 
 <div align="center">
-<sub>© 2026 Stellar Safety & Alignment Research Lab (Stellar SAR Lab). Independent empirical research initiative.</sub>
+<sub>© 2026 Stellar ASION (Stellar Alignment, Safety, & Inference Optimized Networks). Independent empirical research initiative.</sub>
 </div>

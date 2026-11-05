@@ -74,7 +74,7 @@ export const Founder: React.FC = () => {
             </a>
 
             <a
-              href="https://huggingface.co/Stellar-lab"
+              href="https://huggingface.co/Pradeep016"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-background-surface/80 border border-border hover:border-amber-400 text-sm font-medium text-white transition-all duration-200 hover:shadow-lg hover:shadow-amber-400/10"
