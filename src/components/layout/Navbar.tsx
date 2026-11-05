@@ -111,11 +111,11 @@ export const Navbar: React.FC = () => {
             </a>
 
             <Link
-              to="/projects"
+              to="/models"
               className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold font-mono bg-accent-blue/10 text-accent-blue border border-accent-blue/30 hover:bg-accent-blue hover:text-background-deep transition-all duration-200"
             >
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Research</span>
+              <span>ARM Model</span>
             </Link>
           </div>
 

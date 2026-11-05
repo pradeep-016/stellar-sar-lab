@@ -14,14 +14,10 @@ export const siteConfig = {
   githubUrl: 'https://github.com/pradeep-016/stellar-sar-lab',
   huggingFaceUrl: 'https://huggingface.co/Stellar-lab',
   navItems: [
-    { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
-    { label: 'Researcher', href: '/founder' },
     { label: 'Research', href: '/research' },
-    { label: 'Projects', href: '/projects' },
-    { label: 'Publications', href: '/publications' },
     { label: 'Models', href: '/models' },
-    { label: 'Updates', href: '/updates' },
+    { label: 'Publications', href: '/publications' },
     { label: 'Contact', href: '/contact' },
   ],
   footerLinks: {
@@ -34,13 +30,14 @@ export const siteConfig = {
       { label: 'Optimization Failures', href: '/research#optimization-failures' },
     ],
     projects: [
-      { label: 'Founding Project: ARM', href: '/projects#arm' },
+      { label: 'Founding Project: ARM', href: '/projects' },
       { label: 'Model Releases (ARM)', href: '/models' },
     ],
     resources: [
-      { label: 'About the Lab', href: '/about' },
+      { label: 'About Mission', href: '/about' },
       { label: 'Publications', href: '/publications' },
       { label: 'Research Updates', href: '/updates' },
+      { label: 'Contact & Inquiries', href: '/contact' },
       { label: 'GitHub Repository', href: 'https://github.com/pradeep-016/stellar-sar-lab' },
     ],
   },

@@ -10,6 +10,7 @@ import {
   Scale,
   Target,
   Sparkles,
+  ArrowRight,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -59,7 +60,7 @@ export const About: React.FC = () => {
             A New Independent Initiative for Empirical AI Safety
           </h1>
           <p className="text-lg text-scientific-slate leading-relaxed">
-            StellarLab ({siteConfig.fullName}) is a newly established independent research initiative investigating how learned objectives, reward models, and automated evaluators behave when subjected to optimization pressure.
+            Stellar ASION ({siteConfig.fullName}) is a newly established independent research initiative investigating how learned objectives, reward models, and automated evaluators behave when subjected to optimization pressure.
           </p>
         </div>
 
@@ -80,7 +81,7 @@ export const About: React.FC = () => {
                 Our mission is to advance the empirical understanding of these evaluators: charting their failure boundaries, measuring Goodhart divergence under selection pressure, and developing multi-dimensional reward architectures capable of robust generalization.
               </p>
               <p>
-                StellarLab’s research journey begins with our founding project: the <strong>Associative Reward Model (ARM)</strong>. We operate as an independent research initiative, prioritizing empirical rigor, open-source models, and transparent evaluation protocols.
+                Stellar ASION’s research journey begins with our founding project: the <strong>Associative Reward Model (ARM)</strong>. We operate as an independent research initiative, prioritizing empirical rigor, open-source models, and transparent evaluation protocols.
               </p>
             </div>
           </div>
@@ -103,7 +104,7 @@ export const About: React.FC = () => {
                 Institutional Clarification & Scope:
               </span>
               <p>
-                StellarLab is a newly founded independent research initiative. Its research portfolio begins with the ARM project. Prior independent research projects by the founder were conducted as personal research activities and are strictly separate from StellarLab’s institutional outputs.
+                Stellar ASION is a newly founded independent research initiative. Its research portfolio begins with the ARM project. Prior independent research projects by the founder were conducted as personal research activities and are strictly separate from Stellar ASION’s institutional outputs.
               </p>
             </div>
           </div>
@@ -146,6 +147,25 @@ export const About: React.FC = () => {
         {/* WORKFLOW PIPELINE INTERACTIVE COMPONENT */}
         <div className="mb-20">
           <ResearchPipelineWorkflow />
+        </div>
+
+        {/* RESEARCH INITIATIVE PROFILE NOTE */}
+        <div className="mb-20 p-6 md:p-8 rounded-2xl bg-background-surface/50 border border-border/70 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="space-y-1 max-w-2xl">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-accent-cyan block">
+              RESEARCH INITIATIVE
+            </span>
+            <p className="text-sm text-scientific-slate leading-relaxed">
+              Stellar ASION is conducted by independent AI alignment researcher <strong className="text-white">Pradeep L</strong>, investigating objective reliability, Goodhart divergence, and multi-dimensional preference architectures.
+            </p>
+          </div>
+          <Link
+            to="/founder"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-background-elevated hover:bg-slate-800 border border-border hover:border-accent-blue text-xs font-mono text-scientific-slate hover:text-white transition-all duration-200 flex-shrink-0"
+          >
+            <span>Researcher Profile</span>
+            <ArrowRight className="w-3.5 h-3.5 text-accent-cyan" />
+          </Link>
         </div>
 
         {/* LONG-TERM DIRECTION & INITIATION */}
