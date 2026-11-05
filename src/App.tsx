@@ -4,6 +4,7 @@ import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
+import { Founder } from './pages/Founder';
 import { Research } from './pages/Research';
 import { Projects } from './pages/Projects';
 import { Publications } from './pages/Publications';
@@ -38,6 +39,8 @@ export const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/founder" element={<Founder />} />
+          <Route path="/researcher" element={<Founder />} />
           <Route path="/research" element={<Research />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/publications" element={<Publications />} />

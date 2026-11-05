@@ -60,25 +60,18 @@ export const models: ModelRelease[] = [
     ],
     benchmarkResults: [
       {
-        name: 'RewardBench Evaluation 1',
-        score: 89.2,
-        evalType: 'Primary Suite Configuration',
-        context:
-          'Reported benchmark result on RewardBench under evaluation configuration 1. Values are specific to configuration parameters.',
-      },
-      {
-        name: 'RewardBench Evaluation 2',
-        score: 74.4,
-        evalType: 'Secondary Suite Configuration',
-        context:
-          'Reported benchmark result on RewardBench under evaluation configuration 2. Stated directly without speculative cross-comparisons.',
-      },
-      {
         name: 'RM-Bench (Hard Style-Trap)',
-        score: 65.6,
+        score: 67.09,
         evalType: 'Adversarial Stylistic Challenge',
         context:
-          'Evaluates resistance against verbosity bias, sycophancy, and stylistic deception.',
+          'Achieved 67.09% accuracy vs Skywork-27B (54.00%), GPT-4o (52.80%), and ArmoRM-8B (46.80%).',
+      },
+      {
+        name: 'AllenAI RewardBench v1 Core',
+        score: 89.88,
+        evalType: 'Primary Evaluation Suite',
+        context:
+          'Overall Macro accuracy across 2,985 test pairs (Chat: 94.40%, Reasoning: 90.43%, Safety: 90.45%, General: 90.56%).',
       },
       {
         name: 'JudgeBench',
@@ -101,10 +94,10 @@ export const models: ModelRelease[] = [
       'Results are reported without ranking claims or superiority assertions over other architectures.',
     ],
     access: {
-      huggingFaceUrl: 'https://huggingface.co/StellarLab',
+      huggingFaceUrl: 'https://huggingface.co/Stellar-lab/Stellar-Qwen3-8B-ARM',
       modelType: 'Reward Model (Causal LM Head with Decomposed Projection)',
       checkpointType: 'Merged Standalone Checkpoint (Weights fully integrated)',
-      license: 'Research Open-Source (To be finalized upon publication)',
+      license: 'Research Open-Source (Apache 2.0)',
     },
     citationSnippet: `@misc{stellarlab2026arm,
   title={Associative Reward Model (ARM): Multi-Dimensional Preference Supervision in Language Models},

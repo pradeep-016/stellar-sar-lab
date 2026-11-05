@@ -70,22 +70,16 @@ export const projects: ResearchProject[] = [
     ],
     benchmarkScores: [
       {
-        benchmark: 'RewardBench Evaluation 1',
-        score: 89.2,
-        description:
-          'Standard RewardBench suite configuration 1. Note: Does not imply superiority or direct equivalence with evaluation 2.',
-      },
-      {
-        benchmark: 'RewardBench Evaluation 2',
-        score: 74.4,
-        description:
-          'Secondary RewardBench suite evaluation configuration. Reported directly without speculative comparisons.',
-      },
-      {
         benchmark: 'RM-Bench (Hard Style-Trap)',
-        score: 65.6,
+        score: 67.09,
         description:
-          'Evaluates resistance against length bias, deceptive politeness, and superficial styling traps.',
+          'Achieved 67.09% accuracy vs Skywork-27B (54.00%), GPT-4o (52.80%), and ArmoRM-8B (46.80%).',
+      },
+      {
+        benchmark: 'AllenAI RewardBench v1 Core',
+        score: 89.88,
+        description:
+          'Overall Macro accuracy across 2,985 test pairs (Chat: 94.40%, Reasoning: 90.43%, Safety: 90.45%, General: 90.56%).',
       },
       {
         benchmark: 'JudgeBench',
@@ -101,7 +95,7 @@ export const projects: ResearchProject[] = [
       'Standalone release is planned upon publication; currently undergoing validation and checkpoint preparation.',
     ],
     links: {
-      huggingFace: 'https://huggingface.co/StellarLab',
+      huggingFace: 'https://huggingface.co/Stellar-lab/Stellar-Qwen3-8B-ARM',
       code: 'https://github.com/pradeep-016/stellar-sar-lab',
     },
   },
