@@ -75,7 +75,7 @@ export const Home: React.FC = () => {
           <div className="mt-16 pt-8 border-t border-border/40 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left font-mono text-xs">
             <div className="p-3 bg-background-surface/50 rounded-lg border border-border/60">
               <span className="text-scientific-muted block text-[10px]">ORGANIZATIONAL STATUS</span>
-              <span className="text-white font-semibold">Newly Established Lab</span>
+              <span className="text-white font-semibold">Independent Research Initiative</span>
             </div>
             <div className="p-3 bg-background-surface/50 rounded-lg border border-border/60">
               <span className="text-scientific-muted block text-[10px]">FOUNDING RESEARCH</span>
@@ -105,7 +105,7 @@ export const Home: React.FC = () => {
                 Investigating Evaluators Under Optimization Pressure
               </h2>
               <p className="text-base text-scientific-slate leading-relaxed">
-                StellarLab is an independent empirical research initiative investigating AI safety and alignment. Increasingly capable language models are guided, steered, and evaluated by learned reward models and automated proxies.
+                Stellar ASION is an independent empirical research initiative investigating AI safety and alignment. Increasingly capable language models are guided, steered, and evaluated by learned reward models and automated proxies.
               </p>
               <p className="text-base text-scientific-slate leading-relaxed">
                 Our scientific agenda focuses on understanding the failure modes of learned objectives—including specification gaming, reward hacking, Goodhart divergence, and the limits of automated evaluation.
@@ -115,7 +115,7 @@ export const Home: React.FC = () => {
                   to="/about"
                   className="inline-flex items-center gap-2 text-sm font-mono font-semibold text-accent-blue hover:text-sky-300"
                 >
-                  <span>About StellarLab's mission & principles</span>
+                  <span>About Stellar ASION's mission & principles</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -163,7 +163,7 @@ export const Home: React.FC = () => {
               Visualizing Reward–Quality Divergence
             </h2>
             <p className="text-sm sm:text-base text-scientific-slate">
-              A conceptual illustration of Goodhart’s Law in AI alignment: how proxy reward scores can continue rising while underlying task quality decouples.
+              A conceptual illustration of Goodhart's Law in AI alignment: how proxy reward scores can continue rising while underlying task quality decouples.
             </p>
           </div>
 
@@ -185,7 +185,7 @@ export const Home: React.FC = () => {
                 Laboratory Research Directions
               </h2>
               <p className="text-base text-scientific-slate mt-2 max-w-2xl">
-                The core questions and technical agendas guiding StellarLab's empirical AI safety program.
+                The core questions and technical agendas guiding Stellar ASION's empirical AI safety program.
               </p>
             </div>
 
@@ -215,10 +215,10 @@ export const Home: React.FC = () => {
                 FOUNDING RESEARCH INITIATIVE
               </Badge>
               <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-3 font-display">
-                StellarLab's Founding Research Project
+                Stellar ASION's Founding Research Project
               </h2>
               <p className="text-base text-scientific-slate mt-2 max-w-2xl">
-                StellarLab's research journey begins with the Associative Reward Model (ARM), investigating multi-dimensional preference supervision on an open Qwen3-8B backbone.
+                Stellar ASION's research journey begins with the Associative Reward Model (ARM), investigating multi-dimensional preference supervision on an open Qwen3-8B backbone.
               </p>
             </div>
 
@@ -248,7 +248,7 @@ export const Home: React.FC = () => {
               Publications in Preparation & Open Research
             </h2>
             <p className="text-base text-scientific-slate mt-2 max-w-2xl">
-              As a newly established laboratory, StellarLab's publication portfolio is currently being established, starting with the forthcoming ARM research manuscript.
+              As an independent research initiative, Stellar ASION's publication portfolio is actively established, starting with the peer-reviewed AIAS 2026 workshop paper and the forthcoming ARM research manuscript.
             </p>
           </div>
 
@@ -307,12 +307,12 @@ export const Home: React.FC = () => {
 
                 <div className="grid grid-cols-2 gap-2 text-xs font-mono mb-6">
                   <div className="bg-background-deep p-2.5 rounded border border-border">
-                    <span className="text-scientific-muted block text-[10px]">REPORTED REWARDBENCH 1</span>
-                    <span className="text-accent-blue font-bold text-sm">89.2</span>
+                    <span className="text-scientific-muted block text-[10px]">ALLENAI REWARDBENCH V1</span>
+                    <span className="text-accent-blue font-bold text-sm">89.88%</span>
                   </div>
                   <div className="bg-background-deep p-2.5 rounded border border-border">
                     <span className="text-scientific-muted block text-[10px]">RM-BENCH HARD STYLE-TRAP</span>
-                    <span className="text-accent-violet font-bold text-sm">65.6</span>
+                    <span className="text-accent-violet font-bold text-sm">67.09%</span>
                   </div>
                 </div>
 
@@ -345,7 +345,7 @@ export const Home: React.FC = () => {
             RESEARCH COLLABORATION
           </Badge>
           <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight mt-4 mb-6 font-display">
-            Engage with StellarLab Research
+            Engage with Stellar ASION Research
           </h2>
           <p className="text-base sm:text-lg text-scientific-slate max-w-2xl mx-auto mb-10 leading-relaxed">
             We welcome scientific discussion, independent empirical evaluation, and collaboration with researchers investigating reward modeling, alignment, and evaluator reliability.

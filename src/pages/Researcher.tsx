@@ -16,7 +16,7 @@ import {
   Compass,
 } from 'lucide-react';
 
-export const Founder: React.FC = () => {
+export const Researcher: React.FC = () => {
   const researchInterests = [
     {
       title: 'Reward Hacking & Specification Gaming',
@@ -63,7 +63,7 @@ export const Founder: React.FC = () => {
           {/* Quick Links Row */}
           <div className="flex flex-wrap items-center gap-3">
             <a
-              href="https://github.com/pradeep-016/"
+              href="https://github.com/pradeep-016"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-background-surface/80 border border-border hover:border-accent-blue text-sm font-medium text-white transition-all duration-200 hover:shadow-lg hover:shadow-accent-blue/10"
@@ -206,7 +206,7 @@ export const Founder: React.FC = () => {
                     <span className="text-base font-bold font-mono text-emerald-400">89.88%</span>
                   </div>
                   <p className="text-[11px] text-scientific-muted leading-relaxed">
-                    Overall Macro accuracy across 2,985 test pairs (Chat: 94.40%, Reasoning: 90.43%, Safety: 90.45%, General: 90.56%).
+                    Overall Macro accuracy across 2,985 test pairs (Chat: 94.40%, Reasoning: 90.43%, Safety: 90.45%, General: 90.56%). Self-evaluated protocol (v0.1.4).
                   </p>
                 </div>
               </div>
@@ -235,7 +235,7 @@ export const Founder: React.FC = () => {
                     ACCEPTED WORKSHOP PAPER
                   </Badge>
                   <span className="text-xs font-mono text-scientific-muted">
-                    AIAS 2026 (LLA)
+                    AIAS 2026 (held with LLA 2026)
                   </span>
                 </div>
 
@@ -243,7 +243,7 @@ export const Founder: React.FC = () => {
                   Evaluator Reliability Under Test-Time Scaling
                 </h3>
                 <p className="text-xs sm:text-sm font-mono text-accent-blue mb-4">
-                  AIAS 2026 Workshop on Lifelong Agents: Learning, Aligning, and Evolving (LLA)
+                  AIAS 2026 Workshop on Lifelong Agents (held with LLA 2026)
                 </p>
 
                 <p className="text-xs sm:text-sm text-scientific-slate leading-relaxed mb-6">
@@ -280,7 +280,7 @@ export const Founder: React.FC = () => {
                   className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-background-elevated hover:bg-slate-800 border border-border hover:border-slate-600 text-xs font-mono text-white transition-all duration-200"
                 >
                   <FileText className="w-3.5 h-3.5 text-accent-blue" />
-                  <span>Code & Artifacts</span>
+                  <span>Replication Code & Findings</span>
                   <ExternalLink className="w-3.5 h-3.5 text-scientific-muted" />
                 </a>
               </div>

@@ -49,7 +49,7 @@ export const Research: React.FC = () => {
             Research Directions & Empirical Agendas
           </h1>
           <p className="text-lg text-scientific-slate leading-relaxed">
-            StellarLab investigates the reliability of learned objectives, reward representations, and verifiers as language models face increasing optimization pressure.
+            Stellar ASION investigates the reliability of learned objectives, reward representations, and verifiers as language models face increasing optimization pressure.
           </p>
         </div>
 

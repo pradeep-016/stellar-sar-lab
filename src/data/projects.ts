@@ -4,13 +4,13 @@ export const projects: ResearchProject[] = [
   {
     id: 'associative-reward-model-arm',
     slug: 'arm',
-    title: "StellarLab's Founding Research Project — Associative Reward Model (ARM)",
+    title: "Stellar ASION's Founding Research Project — Associative Reward Model (ARM)",
     shortTitle: 'Associative Reward Model (ARM)',
     status: 'In Progress / Founding Research Project',
     statusType: 'in-progress',
     presentationVenue: 'Inaugural Laboratory Research Project — Standalone Model Release Planned',
     overview:
-      "The Associative Reward Model (ARM) is the founding research project undertaken under StellarLab. It investigates multi-dimensional preference supervision built upon an open Qwen3-8B foundation, engineered to supervise six distinct axes of model performance rather than collapsing complex evaluations into an uninterpretable scalar score.",
+      "The Associative Reward Model (ARM) is the founding research project undertaken under Stellar ASION. It investigates multi-dimensional preference supervision built upon an open Qwen3-8B foundation, engineered to supervise six distinct axes of model performance rather than collapsing complex evaluations into an uninterpretable scalar score.",
     researchQuestion:
       'Can explicit multi-dimensional preference supervision decouple stylistic surface features from substantive task correctness and mitigate single-axis reward gaming?',
     methodology: [
@@ -27,7 +27,7 @@ export const projects: ResearchProject[] = [
       optimization: 'QLoRA 4-bit quantization, pairwise preference loss + consistency regularization',
     },
     specifications: {
-      'Project Designation': "StellarLab's Founding Research Project",
+      'Project Designation': "Stellar ASION's Founding Research Project",
       'Foundation Backbone': 'Qwen3-8B',
       'Quantization Mode': '4-bit NormalFloat (NF4)',
       'Fine-tuning Framework': 'QLoRA (Quantized Low-Rank Adaptation)',

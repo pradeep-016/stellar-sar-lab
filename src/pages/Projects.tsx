@@ -26,7 +26,7 @@ export const Projects: React.FC = () => {
             Research Projects
           </h1>
           <p className="text-lg text-scientific-slate leading-relaxed">
-            StellarLab's empirical research program begins with our founding project investigating multi-dimensional preference supervision and decomposed reward representations.
+            Stellar ASION's empirical research program begins with our founding project investigating multi-dimensional preference supervision and decomposed reward representations.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export const Projects: React.FC = () => {
                 Scalar reward models frequently suffer from style-traps, sycophancy, and length bias because all behavioral criteria are collapsed into a single scalar value. ARM remedies this vulnerability by supervising six explicit dimensional heads and penalizing inconsistent preferences through consistency loss regularization.
               </p>
               <p>
-                As StellarLab's inaugural research initiative, ARM establishes our empirical pipeline for training, checkpointing, and evaluating decomposed evaluators that resist single-axis gaming.
+                As Stellar ASION's inaugural research initiative, ARM establishes our empirical pipeline for training, checkpointing, and evaluating decomposed evaluators that resist single-axis gaming.
               </p>
             </div>
 

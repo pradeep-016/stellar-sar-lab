@@ -10,7 +10,7 @@ export const models: ModelRelease[] = [
     status: 'In Progress / Release Planned Upon Publication',
     isStandalone: true,
     overview:
-      "Associative Reward Model (ARM) is the founding research model developed under StellarLab on an open Qwen3-8B backbone. Unlike scalar reward models that collapse multi-faceted qualitative judgments into an uninterpretable single score, ARM decomposes evaluation across six structured dimensions: instruction adherence, relevance, completeness, reasoning validity, task correctness, and communication quality.",
+      "Associative Reward Model (ARM) is the founding research model developed under Stellar ASION on an open Qwen3-8B backbone. Unlike scalar reward models that collapse multi-faceted qualitative judgments into an uninterpretable single score, ARM decomposes evaluation across six structured dimensions: instruction adherence, relevance, completeness, reasoning validity, task correctness, and communication quality.",
     architectureDetails: {
       backbone: 'Qwen3-8B',
       quantization: '4-bit NormalFloat (NF4) base weights',
@@ -62,16 +62,16 @@ export const models: ModelRelease[] = [
       {
         name: 'RM-Bench (Hard Style-Trap)',
         score: 67.09,
-        evalType: 'Adversarial Stylistic Challenge',
+        evalType: 'Adversarial Stylistic Challenge (Self-Evaluated)',
         context:
-          'Achieved 67.09% accuracy vs Skywork-27B (54.00%), GPT-4o (52.80%), and ArmoRM-8B (46.80%).',
+          'Achieved 67.09% accuracy vs Skywork-27B (54.00%), GPT-4o (52.80%), and ArmoRM-8B (46.80%). Baselines from public leaderboard.',
       },
       {
-        name: 'AllenAI RewardBench v1 Core',
+        name: 'AllenAI RewardBench v1',
         score: 89.88,
-        evalType: 'Primary Evaluation Suite',
+        evalType: 'Primary Evaluation Suite (Self-Evaluated Protocol)',
         context:
-          'Overall Macro accuracy across 2,985 test pairs (Chat: 94.40%, Reasoning: 90.43%, Safety: 90.45%, General: 90.56%).',
+          'Evaluated locally with official reward-bench harness (v0.1.4). Leaderboard PR pending. Chat: 94.40%, Reasoning: 90.43%, Safety: 90.45%, Prior Sets: 84.24%.',
       },
       {
         name: 'JudgeBench',
@@ -99,12 +99,5 @@ export const models: ModelRelease[] = [
       checkpointType: 'Merged Standalone Checkpoint (Weights fully integrated)',
       license: 'Research Open-Source (Apache 2.0)',
     },
-    citationSnippet: `@misc{stellarlab2026arm,
-  title={Associative Reward Model (ARM): Multi-Dimensional Preference Supervision in Language Models},
-  author={Stellar Safety & Alignment Research Lab},
-  year={2026},
-  note={Research in progress}
-}`,
   },
 ];
-

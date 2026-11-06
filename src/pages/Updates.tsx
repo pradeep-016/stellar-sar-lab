@@ -77,7 +77,7 @@ export const Updates: React.FC = () => {
 
         {/* News Verification Notice */}
         <div className="mt-16 max-w-4xl p-6 rounded-2xl bg-background-deep/70 border border-border text-xs text-scientific-muted">
-          <strong>Editorial Integrity Policy:</strong> StellarLab records only verified milestones, workshop acceptances, and empirical completions. Unverified news or speculative roadmap entries are not published.
+          <strong>Editorial Integrity Policy:</strong> Stellar ASION records only verified milestones, workshop acceptances, and empirical completions. Unverified news or speculative roadmap entries are not published.
         </div>
       </div>
     </div>

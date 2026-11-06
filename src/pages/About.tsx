@@ -104,7 +104,7 @@ export const About: React.FC = () => {
                 Institutional Clarification & Scope:
               </span>
               <p>
-                Stellar ASION is a newly founded independent research initiative. Its research portfolio begins with the ARM project. Prior independent research projects by the founder were conducted as personal research activities and are strictly separate from Stellar ASION’s institutional outputs.
+                Stellar ASION is a newly founded independent research initiative. Its research portfolio begins with the ARM project. Prior independent research projects by the researcher were conducted as personal research activities and are strictly separate from Stellar ASION’s institutional outputs.
               </p>
             </div>
           </div>
@@ -120,7 +120,7 @@ export const About: React.FC = () => {
               Research Philosophy & Principles
             </h2>
             <p className="text-base text-scientific-slate">
-              Every empirical inquiry conducted at StellarLab adheres to six foundational methodological commitments.
+              Every empirical inquiry conducted at Stellar ASION adheres to six foundational methodological commitments.
             </p>
           </div>
 
@@ -160,7 +160,7 @@ export const About: React.FC = () => {
             </p>
           </div>
           <Link
-            to="/founder"
+            to="/researcher"
             className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-background-elevated hover:bg-slate-800 border border-border hover:border-accent-blue text-xs font-mono text-scientific-slate hover:text-white transition-all duration-200 flex-shrink-0"
           >
             <span>Researcher Profile</span>
@@ -182,7 +182,7 @@ export const About: React.FC = () => {
                 As AI models transition toward autonomous agent loops and deep inference-time search, the evaluator becomes the primary bottleneck for safe intelligence. Flawed evaluators steering multi-step search will systematically amplify deceptive or incorrect trajectories.
               </p>
               <p>
-                StellarLab’s long-term objective is to build the theoretical and empirical foundations for evaluators that remain robust under arbitrary optimization pressure, beginning with decomposed multi-dimensional supervision in ARM.
+                Stellar ASION’s long-term objective is to build the theoretical and empirical foundations for evaluators that remain robust under arbitrary optimization pressure, beginning with decomposed multi-dimensional supervision in ARM.
               </p>
             </div>
 

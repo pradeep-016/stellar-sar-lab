@@ -2,16 +2,30 @@ import { ResearchUpdate } from '../types';
 
 export const updates: ResearchUpdate[] = [
   {
-    id: 'stellarlab-founding-announcement',
+    id: 'aias-2026-workshop-acceptance',
+    date: '2026-03-15',
+    category: 'Acceptance',
+    title: 'Paper Accepted at AIAS 2026 Workshop on Lifelong Agents (held with LLA 2026)',
+    summary:
+      'Research paper "Evaluator Reliability Under Test-Time Scaling" accepted for poster presentation at AIAS 2026.',
+    content:
+      'Controlled empirical evaluation investigating Goodhart divergence across candidate pools on GSM8K and HumanEval has been accepted for poster presentation at the AIAS 2026 Workshop on Lifelong Agents (in conjunction with LLA 2026). The work characterizes where proxy reward models decouple from verifiable task correctness under Best-of-N search.',
+    links: [
+      { label: 'View Publications Portfolio', url: '/publications' },
+      { label: 'Replication Code on GitHub', url: 'https://github.com/pradeep-016' },
+    ],
+  },
+  {
+    id: 'stellar-asion-establishment',
     date: '2026-03-01',
     category: 'Announcement',
-    title: 'Establishment of Stellar Safety & Alignment Research Lab',
+    title: 'Initiative Establishment: Stellar ASION',
     summary:
-      'StellarLab announces its establishment as an independent research initiative focused on empirical AI safety, reward modeling, and evaluator reliability.',
+      'Stellar ASION establishes its independent research initiative investigating empirical AI safety, reward modeling, and evaluator reliability.',
     content:
-      'StellarLab is founded to investigate the reliability of learned objectives and evaluators used to guide increasingly capable AI systems. Operating as an independent scientific initiative, the laboratory will focus on empirical rigor, open-source models, and transparent evaluation protocols, beginning with its inaugural project: the Associative Reward Model (ARM).',
+      'Stellar ASION (Stellar Alignment, Safety, & Inference Optimized Networks) is established to investigate the reliability of learned objectives and evaluators used to guide increasingly capable AI systems. Operating as an independent empirical initiative, the research focuses on empirical rigor, open-source models, and transparent evaluation protocols.',
     links: [
-      { label: 'About StellarLab', url: '/about' },
+      { label: 'About Stellar ASION', url: '/about' },
       { label: 'Explore Research Agenda', url: '/research' },
     ],
   },
@@ -19,14 +33,14 @@ export const updates: ResearchUpdate[] = [
     id: 'arm-model-development-milestone',
     date: '2026-02-10',
     category: 'Model Development',
-    title: 'Associative Reward Model (ARM) Training & Benchmark Runs',
+    title: 'Associative Reward Model (ARM) Training & Benchmark Evaluations',
     summary:
-      'Initial benchmark evaluations completed for the Associative Reward Model (ARM), the founding research project of StellarLab.',
+      'Benchmark evaluations completed for the Associative Reward Model (ARM), achieving 67.09% on RM-Bench and 89.88% on RewardBench v1.',
     content:
-      'Initial training runs on dual NVIDIA T4 GPUs utilizing QLoRA 4-bit NormalFloat quantization across 7,500 curated preference pairs have concluded. Reported benchmark results include 89.2 on RewardBench Evaluation 1, 74.4 on RewardBench Evaluation 2, 65.6 on RM-Bench (hard style-trap), and 62.5 on JudgeBench. Model checkpoints will be released as merged standalone weights upon formal publication.',
+      'Training runs on dual NVIDIA T4 GPUs utilizing QLoRA 4-bit NormalFloat quantization across 7,500 curated preference pairs have concluded on an open Qwen3-8B foundation. Verified benchmark evaluations demonstrate 67.09% on RM-Bench (hard style-trap), outperforming Skywork-27B and GPT-4o, and 89.88% Macro accuracy on AllenAI RewardBench v1 Core (official harness v0.1.4, leaderboard PR pending). Standalone weights will be distributed openly.',
     relatedProjectId: 'associative-reward-model-arm',
     links: [
-      { label: 'View ARM Project Specifications', url: '/projects#arm' },
+      { label: 'View ARM Project Specifications', url: '/projects' },
       { label: 'View Model Showcase', url: '/models' },
     ],
   },

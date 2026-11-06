@@ -1,31 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { models } from '../data/models';
 import { Badge } from '../components/common/Badge';
 import { ArmArchitectureDiagram } from '../components/visualizations/ArmArchitectureDiagram';
 import { BenchmarkBarChart } from '../components/visualizations/BenchmarkBarChart';
 import {
   Sparkles,
-  Layers,
-  Cpu,
   Github,
-  ExternalLink,
-  Copy,
-  Check,
   AlertCircle,
-  FileCode,
   CheckCircle2,
+  FileCheck2,
 } from 'lucide-react';
 
 export const Models: React.FC = () => {
   const armModel = models[0];
-  const [copiedCitation, setCopiedCitation] = useState(false);
-
-  const copyCitation = () => {
-    if (!armModel.citationSnippet) return;
-    navigator.clipboard.writeText(armModel.citationSnippet);
-    setCopiedCitation(true);
-    setTimeout(() => setCopiedCitation(false), 2000);
-  };
 
   return (
     <div className="pt-28 pb-20">
@@ -39,7 +26,7 @@ export const Models: React.FC = () => {
             Models & Open-Source Research
           </h1>
           <p className="text-lg text-scientific-slate leading-relaxed">
-            Public releases of standalone reward model checkpoints, evaluation codebases, and training configurations.
+            Public releases of standalone reward model checkpoints, evaluation codebases, and training configurations from Stellar ASION.
           </p>
         </div>
 
@@ -202,38 +189,17 @@ export const Models: React.FC = () => {
           </div>
         </div>
 
-        {/* CITATION INSTRUCTIONS */}
-        {armModel.citationSnippet && (
-          <div className="bg-background-deep/90 border border-border rounded-2xl p-6 sm:p-8">
-            <div className="flex items-center justify-between mb-4">
-              <div className="text-xs font-mono text-scientific-muted uppercase tracking-wider">
-                Citation & Reference
-              </div>
-              <button
-                onClick={copyCitation}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-background-elevated border border-border hover:border-slate-600 text-xs font-mono text-white transition-colors"
-              >
-                {copiedCitation ? (
-                  <>
-                    <Check className="w-3.5 h-3.5 text-emerald-400" />
-                    <span className="text-emerald-400">Copied</span>
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-3.5 h-3.5" />
-                    <span>Copy BibTeX</span>
-                  </>
-                )}
-              </button>
-            </div>
-
-            <pre className="p-4 rounded-xl bg-background-surface font-mono text-xs text-scientific-slate overflow-x-auto border border-border/60">
-              {armModel.citationSnippet}
-            </pre>
+        {/* EVALUATION PROTOCOL & EPISTEMIC STATUS (STRICTLY NO BIBTEX) */}
+        <div className="bg-background-deep/90 border border-accent-blue/30 rounded-2xl p-6 sm:p-8">
+          <div className="flex items-center gap-2 mb-3 text-xs font-mono text-accent-cyan uppercase tracking-wider">
+            <FileCheck2 className="w-4 h-4 text-accent-cyan" />
+            <span>Evaluation Protocol & Epistemic Status</span>
           </div>
-        )}
+          <p className="text-sm text-scientific-slate leading-relaxed">
+            Evaluations conducted using official open-source harnesses with deterministic greedy decoding (temperature=0.0). Public PR for inclusion in the official AllenAI leaderboard is currently under review.
+          </p>
+        </div>
       </div>
     </div>
   );
 };
-

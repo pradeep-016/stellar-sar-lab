@@ -120,7 +120,7 @@ export const ResearchPipelineWorkflow: React.FC = () => {
             </span>
           </div>
           <h3 className="text-xl md:text-2xl font-bold text-white font-display">
-            The StellarLab Empirical Research Approach
+            The Stellar ASION Empirical Research Approach
           </h3>
           <p className="text-xs sm:text-sm text-scientific-slate mt-1 max-w-xl">
             A visual workflow from hypothesis formulation to reproducible open-source release.

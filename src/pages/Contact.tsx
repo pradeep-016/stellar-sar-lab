@@ -17,7 +17,7 @@ export const Contact: React.FC = () => {
   const handleMailto = (e: React.FormEvent) => {
     e.preventDefault();
     const mailtoUrl = `mailto:${siteConfig.contactEmail}?subject=${encodeURIComponent(
-      subject || 'Research Inquiry: StellarLab'
+      subject || 'Research Inquiry: Stellar ASION'
     )}&body=${encodeURIComponent(message)}`;
     window.location.href = mailtoUrl;
   };
@@ -120,7 +120,7 @@ export const Contact: React.FC = () => {
                       Hugging Face Organization
                     </div>
                     <div className="text-xs font-mono text-scientific-muted">
-                      StellarLab Model Releases
+                      Stellar-lab Model Releases
                     </div>
                   </div>
                 </div>
@@ -132,7 +132,7 @@ export const Contact: React.FC = () => {
             <div className="p-4 rounded-xl bg-background-deep/60 border border-border/80 text-xs text-scientific-slate flex items-start gap-3">
               <Shield className="w-4 h-4 text-accent-blue flex-shrink-0 mt-0.5" />
               <div>
-                <strong>Transparency Guarantee:</strong> StellarLab does not maintain automated marketing funnels, fake social bots, or unauthorized institutional affiliations.
+                <strong>Transparency Guarantee:</strong> Stellar ASION does not maintain automated marketing funnels, fake social bots, or unauthorized institutional affiliations.
               </div>
             </div>
           </div>
@@ -146,7 +146,7 @@ export const Contact: React.FC = () => {
               Initiate Research Discussion
             </h3>
             <p className="text-xs sm:text-sm text-scientific-slate mb-8 leading-relaxed">
-              Compose a message below to launch your default email client with your query directly addressed to StellarLab.
+              Compose a message below to launch your default email client with your query directly addressed to Stellar ASION.
             </p>
 
             <form onSubmit={handleMailto} className="space-y-5">

@@ -1,34 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Publication } from '../../types';
 import { Card } from '../common/Card';
 import { Badge } from '../common/Badge';
-import { FileText, Copy, Check, ExternalLink, Github, Award } from 'lucide-react';
+import { FileText, Github, Award, Sparkles } from 'lucide-react';
 
 interface PublicationCardProps {
   publication: Publication;
 }
 
 export const PublicationCard: React.FC<PublicationCardProps> = ({ publication }) => {
-  const [copied, setCopied] = useState(false);
-
-  const bibtex = publication.bibtex || `@misc{stellarlab2026,
-  title={${publication.title}},
-  author={StellarLab},
-  year={${publication.year}},
-  note={Manuscript in preparation}
-}`;
-
-  const copyBibtex = () => {
-    navigator.clipboard.writeText(bibtex);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   return (
     <Card className="hover:border-accent-blue/50 p-6 md:p-8">
       {/* Category & Status */}
       <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-        <Badge variant="blue" size="sm" icon={<Award className="w-3.5 h-3.5" />}>
+        <Badge
+          variant={publication.category === 'workshop' ? 'blue' : 'violet'}
+          size="sm"
+          icon={<Award className="w-3.5 h-3.5" />}
+        >
           {publication.categoryLabel}
         </Badge>
         <span className="text-xs font-mono text-scientific-muted">
@@ -41,10 +30,15 @@ export const PublicationCard: React.FC<PublicationCardProps> = ({ publication })
         {publication.title}
       </h3>
 
-      {/* Venue */}
-      <div className="text-xs sm:text-sm font-mono text-accent-cyan mb-4">
+      {/* Venue & Authors */}
+      <div className="text-xs sm:text-sm font-mono text-accent-cyan mb-1">
         {publication.venue}
       </div>
+      {publication.authors && (
+        <div className="text-xs font-mono text-scientific-muted mb-4">
+          Author: {Array.isArray(publication.authors) ? publication.authors.join(', ') : publication.authors}
+        </div>
+      )}
 
       {/* Abstract */}
       <div className="text-xs sm:text-sm text-scientific-slate leading-relaxed mb-6 bg-background-deep/50 p-4 rounded-xl border border-border/80">
@@ -63,24 +57,16 @@ export const PublicationCard: React.FC<PublicationCardProps> = ({ publication })
         ))}
       </div>
 
-      {/* Links & Citation Copy */}
+      {/* Links (strictly NO BibTeX) */}
       <div className="pt-4 border-t border-border/60 flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
-        <div className="flex items-center gap-3">
-          {publication.links.pdf && (
+        <div className="flex flex-wrap items-center gap-3">
+          {publication.links.pdf && publication.links.pdf !== '#' && (
             <a
               href={publication.links.pdf}
               className="inline-flex items-center gap-1.5 text-accent-blue hover:text-sky-300 font-semibold"
             >
               <FileText className="w-4 h-4" />
               <span>Paper PDF</span>
-            </a>
-          )}
-          {publication.links.poster && (
-            <a
-              href={publication.links.poster}
-              className="inline-flex items-center gap-1.5 text-scientific-slate hover:text-white"
-            >
-              <span>Presentation / Poster</span>
             </a>
           )}
           {publication.links.code && (
@@ -91,30 +77,25 @@ export const PublicationCard: React.FC<PublicationCardProps> = ({ publication })
               className="inline-flex items-center gap-1.5 text-scientific-slate hover:text-white"
             >
               <Github className="w-4 h-4" />
-              <span>Code</span>
+              <span>Replication Code</span>
+            </a>
+          )}
+          {publication.links.model && (
+            <a
+              href={publication.links.model}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-accent-cyan hover:text-white"
+            >
+              <Sparkles className="w-4 h-4" />
+              <span>Model Weights</span>
             </a>
           )}
         </div>
-
-        <button
-          onClick={copyBibtex}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-background-elevated border border-border hover:border-slate-600 text-scientific-slate hover:text-white transition-colors"
-          title="Copy BibTeX Citation"
-        >
-          {copied ? (
-            <>
-              <Check className="w-3.5 h-3.5 text-emerald-400" />
-              <span className="text-emerald-400">Copied</span>
-            </>
-          ) : (
-            <>
-              <Copy className="w-3.5 h-3.5" />
-              <span>BibTeX</span>
-            </>
-          )}
-        </button>
+        <span className="text-[11px] text-scientific-muted font-mono">
+          {publication.status}
+        </span>
       </div>
     </Card>
   );
 };
-

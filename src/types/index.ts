@@ -75,13 +75,14 @@ export interface Publication {
   workshop?: string;
   year: number;
   abstract: string;
-  authors?: string[];
+  authors?: string[] | string;
   doi?: string;
   bibtex?: string;
   links: {
     pdf?: string;
     poster?: string;
     code?: string;
+    model?: string;
     bibtex?: string;
   };
   keywords: string[];

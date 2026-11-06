@@ -19,13 +19,13 @@ export const Footer: React.FC = () => {
               <div className="w-10 h-10 flex-shrink-0">
                 <img
                   src="./logo.png"
-                  alt="StellarLab Logo"
+                  alt="Stellar ASION Logo"
                   className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(56,189,248,0.3)]"
                 />
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-white font-display text-lg tracking-tight">
-                  Stellar<span className="text-accent-blue">Lab</span>
+                  Stellar<span className="text-accent-blue"> ASION</span>
                 </span>
                 <span className="text-[10px] font-mono text-scientific-muted uppercase tracking-wider">
                   {siteConfig.fullName}
@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="text-sm text-scientific-slate leading-relaxed max-w-sm">
-              StellarLab is an independent research initiative investigating empirical AI safety, reward modeling, evaluator reliability, and alignment under optimization pressure.
+              Stellar ASION is an independent research initiative investigating empirical AI safety, reward modeling, evaluator reliability, and alignment under optimization pressure.
             </p>
 
             <div className="pt-2 flex items-center gap-3">
@@ -133,6 +133,11 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/researcher" className="text-scientific-slate hover:text-white transition-colors">
+                  Researcher Profile
+                </Link>
+              </li>
+              <li>
                 <Link to="/updates" className="text-scientific-slate hover:text-white transition-colors">
                   Research Updates
                 </Link>
@@ -157,7 +162,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar: Copyright & Compliance */}
         <div className="mt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-scientific-muted">
           <div>
-            © {currentYear} {siteConfig.fullName} (StellarLab). All rights reserved.
+            © {currentYear} {siteConfig.fullName} (Stellar ASION). All rights reserved.
           </div>
 
           <div className="flex items-center gap-2 text-scientific-dim text-center md:text-right">

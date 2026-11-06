@@ -8,7 +8,7 @@ export const researchDirections: ResearchDirection[] = [
     shortDescription:
       'Investigating reliability, robustness, and alignment dynamics as intelligent systems increase in reasoning capability and autonomous agency.',
     fullDescription:
-      'As artificial intelligence systems are tasked with longer reasoning chains and autonomous decision-making, ensuring their behaviors remain aligned with human intent is paramount. StellarLab investigates the fundamental structural and empirical challenges of alignment, focusing on verifiable safety bounds, robust adherence to constraints, and failure modes that emerge under strong optimization.',
+      'As artificial intelligence systems are tasked with longer reasoning chains and autonomous decision-making, ensuring their behaviors remain aligned with human intent is paramount. Stellar ASION investigates the fundamental structural and empirical challenges of alignment, focusing on verifiable safety bounds, robust adherence to constraints, and failure modes that emerge under strong optimization.',
     keyThemes: [
       'Empirical AI safety methodologies and diagnostic benchmarks',
       'Robustness of alignment under extreme prompting and test-time search',
@@ -35,7 +35,7 @@ export const researchDirections: ResearchDirection[] = [
     shortDescription:
       'Advancing multi-dimensional preference learning, dimension-level supervision, and generalization bounds in learned reward representations.',
     fullDescription:
-      'Standard alignment workflows frequently compress complex qualitative judgments into a single scalar score, obscuring critical trade-offs between helpfulness, factual accuracy, safety, and reasoning validity. StellarLab focuses on decomposed, multi-dimensional reward architectures (such as the Associative Reward Model) where distinct axes receive structured supervision, yielding interpretable vector signals and resilience against single-axis gaming.',
+      'Standard alignment workflows frequently compress complex qualitative judgments into a single scalar score, obscuring critical trade-offs between helpfulness, factual accuracy, safety, and reasoning validity. Stellar ASION focuses on decomposed, multi-dimensional reward architectures (such as the Associative Reward Model) where distinct axes receive structured supervision, yielding interpretable vector signals and resilience against single-axis gaming.',
     keyThemes: [
       'Multi-dimensional reward representations and decomposed preference heads',
       'Dimension-level preference supervision and cross-entropy loss formulation',
@@ -62,7 +62,7 @@ export const researchDirections: ResearchDirection[] = [
     shortDescription:
       'Investigating how optimization systems exploit weaknesses, loopholes, and unintended incentives in learned reward functions.',
     fullDescription:
-      'When optimization pressure is applied against a learned proxy reward rather than the true objective, models tend to identify shortcuts that inflate reward without delivering genuine task satisfaction. StellarLab studies how specification gaming arises during reinforcement learning and inference-time selection, categorizing recurring vulnerabilities and developing diagnostic benchmarks.',
+      'When optimization pressure is applied against a learned proxy reward rather than the true objective, models tend to identify shortcuts that inflate reward without delivering genuine task satisfaction. Stellar ASION studies how specification gaming arises during reinforcement learning and inference-time selection, categorizing recurring vulnerabilities and developing diagnostic benchmarks.',
     keyThemes: [
       'Reward-function exploitation and unintended proxy loopholes',
       'Specification gaming through superficial verbosity, formatting, or sycophancy',
@@ -91,7 +91,7 @@ export const researchDirections: ResearchDirection[] = [
     shortDescription:
       'Investigating whether learned evaluators reliably distinguish genuinely high-quality outputs from outputs that merely receive high scores.',
     fullDescription:
-      'Both reinforcement learning from human feedback (RLHF) and test-time candidate selection rely on learned evaluators to score completions. StellarLab investigates the robustness and calibration of these evaluators: identifying when automated scoring systems fail to generalize, how candidate-pool composition affects discriminative accuracy, and how to build evaluators that resist distribution shifts.',
+      'Both reinforcement learning from human feedback (RLHF) and test-time candidate selection rely on learned evaluators to score completions. Stellar ASION investigates the robustness and calibration of these evaluators: identifying when automated scoring systems fail to generalize, how candidate-pool composition affects discriminative accuracy, and how to build evaluators that resist distribution shifts.',
     keyThemes: [
       'Calibration of outcome reward models and process reward models',
       'Evaluator robustness under out-of-distribution candidate pools',
@@ -118,7 +118,7 @@ export const researchDirections: ResearchDirection[] = [
     shortDescription:
       'Studying the conditions under which improvements in proxy evaluator scores fail to correspond to improvements in independently measured task correctness.',
     fullDescription:
-      'A central empirical problem in modern alignment is Goodhart’s Law manifested in deep learning: beyond a certain threshold of optimization, proxy reward continues to climb while independently verified task quality plateaus or drops precipitously. StellarLab studies the boundary conditions under which proxy objectives decouple from intended task quality.',
+      "A central empirical problem in modern alignment is Goodhart's Law manifested in deep learning: beyond a certain threshold of optimization, proxy reward continues to climb while independently verified task quality plateaus or drops precipitously. Stellar ASION studies the boundary conditions under which proxy objectives decouple from intended task quality.",
     keyThemes: [
       'Decoupling of proxy reward from ground-truth verification',
       'Measurement protocols for empirical divergence boundaries',
@@ -147,7 +147,7 @@ export const researchDirections: ResearchDirection[] = [
     shortDescription:
       'Analyzing Best-of-N selection, candidate generation budgets, and the limits of compute allocation during inference.',
     fullDescription:
-      'Inference-time search—generating multiple candidates and selecting using a learned verifier—is a dominant paradigm for advanced reasoning. StellarLab investigates the safety boundaries of this paradigm: when does increasing search budget produce genuine capability gains, and when does it merely overwhelm the verifier with spurious candidates that exploit blind spots?',
+      'Inference-time search—generating multiple candidates and selecting using a learned verifier—is a dominant paradigm for advanced reasoning. Stellar ASION investigates the safety boundaries of this paradigm: when does increasing search budget produce genuine capability gains, and when does it merely overwhelm the verifier with spurious candidates that exploit blind spots?',
     keyThemes: [
       'Best-of-N selection dynamics across expanding candidate pools',
       'Pathological candidate emergence under large sample budgets',
