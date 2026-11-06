@@ -151,8 +151,9 @@ export const Footer: React.FC = () => {
                 <a
                   href={`mailto:${siteConfig.contactEmail}`}
                   className="text-xs font-mono text-accent-blue hover:underline break-all block"
+                  title={`Send email to ${siteConfig.contactEmail}`}
                 >
-                  {siteConfig.contactEmail}
+                  {siteConfig.contactEmailDisplay}
                 </a>
               </li>
             </ul>

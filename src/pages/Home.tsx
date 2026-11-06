@@ -373,8 +373,9 @@ export const Home: React.FC = () => {
             <a
               href={`mailto:${siteConfig.contactEmail}`}
               className="text-accent-blue hover:underline"
+              title={`Send email to ${siteConfig.contactEmail}`}
             >
-              {siteConfig.contactEmail}
+              {siteConfig.contactEmailDisplay}
             </a>
           </div>
         </div>

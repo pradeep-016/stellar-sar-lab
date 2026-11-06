@@ -59,14 +59,15 @@ export const Contact: React.FC = () => {
                   <a
                     href={`mailto:${siteConfig.contactEmail}`}
                     className="font-mono text-xs sm:text-sm text-white hover:text-accent-blue truncate"
+                    title={`Send email to ${siteConfig.contactEmail}`}
                   >
-                    {siteConfig.contactEmail}
+                    {siteConfig.contactEmailDisplay}
                   </a>
                 </div>
                 <button
                   onClick={copyEmail}
                   className="p-1.5 rounded-lg bg-background-elevated hover:bg-slate-800 text-scientific-slate hover:text-white transition-colors flex-shrink-0"
-                  title="Copy email to clipboard"
+                  title="Copy direct email address to clipboard"
                 >
                   {copiedEmail ? (
                     <Check className="w-4 h-4 text-emerald-400" />
