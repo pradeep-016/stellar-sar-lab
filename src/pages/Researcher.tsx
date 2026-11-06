@@ -187,7 +187,7 @@ export const Researcher: React.FC = () => {
             </span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8 font-display">
-            Selected Research Projects & Artifacts
+            Research Projects & Artifacts
           </h2>
 
           <div className="space-y-8">

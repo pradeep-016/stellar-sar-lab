@@ -11,7 +11,7 @@ export const siteConfig = {
     'Stellar ASION (Stellar Alignment, Safety, & Inference Optimized Networks) is an independent research initiative investigating AI safety, alignment, reward modeling, and the reliability of learned objectives and evaluators under optimization pressure.',
   url: 'https://pradeep-016.github.io/stellar-sar-lab/',
   contactEmail: 'pradeep.ai.research@zohomail.in',
-  contactEmailDisplay: 'pradeep[dot]ai[dot]research[at]zohomail[dot]in',
+  contactEmailDisplay: 'pradeep.ai.research@zohomail.in',
   githubUrl: 'https://github.com/pradeep-016/stellar-sar-lab',
   huggingFaceUrl: 'https://huggingface.co/Stellar-lab',
   navItems: [
