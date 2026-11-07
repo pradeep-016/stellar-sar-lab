@@ -41,17 +41,17 @@ export default {
           950: '#082f49',
         },
         scientific: {
-          slate: '#94a3b8',
-          muted: '#64748b',
-          dim: '#475569',
-          light: '#f1f5f9',
+          slate: '#cbd5e1',
+          muted: '#94a3b8',
+          dim: '#64748b',
+          light: '#f8fafc',
           pure: '#ffffff',
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        sans: ['Inter', 'Plus Jakarta Sans', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'IBM Plex Mono', 'Consolas', 'monospace'],
-        display: ['Space Grotesk', 'Inter', 'sans-serif'],
+        display: ['Plus Jakarta Sans', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       animation: {
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',

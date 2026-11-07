@@ -23,23 +23,16 @@ export const siteConfig = {
   ],
   footerLinks: {
     research: [
-      { label: 'AI Safety & Alignment', href: '/research#ai-safety-alignment' },
-      { label: 'Reward Modeling', href: '/research#reward-modeling' },
-      { label: 'Reward Hacking & Gaming', href: '/research#reward-hacking' },
-      { label: 'Evaluator Reliability', href: '/research#evaluator-reliability' },
-      { label: 'Reward–Quality Divergence', href: '/research#reward-quality-divergence' },
-      { label: 'Optimization Failures', href: '/research#optimization-failures' },
-    ],
-    projects: [
+      { label: 'Research Agenda', href: '/research' },
       { label: 'Founding Project: ARM', href: '/projects' },
-      { label: 'Model Releases (ARM)', href: '/models' },
-    ],
-    resources: [
-      { label: 'About Mission', href: '/about' },
+      { label: 'Model Releases', href: '/models' },
       { label: 'Publications', href: '/publications' },
+    ],
+    laboratory: [
+      { label: 'About Mission', href: '/about' },
+      { label: 'Researcher Profile', href: '/researcher' },
       { label: 'Research Updates', href: '/updates' },
-      { label: 'Contact & Inquiries', href: '/contact' },
-      { label: 'GitHub Repository', href: 'https://github.com/pradeep-016/stellar-sar-lab' },
+      { label: 'Contact', href: '/contact' },
     ],
   },
 };
