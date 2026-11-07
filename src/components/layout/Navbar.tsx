@@ -43,7 +43,7 @@ export const Navbar: React.FC = () => {
           >
             <div className="relative w-9 h-9 sm:w-10 sm:h-10 flex-shrink-0">
               <img
-                src="./logo.png"
+                src={`${import.meta.env.BASE_URL}logo.png`}
                 alt="Stellar ASION Logo"
                 className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(56,189,248,0.4)] group-hover:scale-105 transition-transform duration-300"
               />
