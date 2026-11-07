@@ -21,7 +21,7 @@ export const ModelCard: React.FC<ModelCardProps> = ({ model }) => {
               {model.status}
             </Badge>
             <Badge variant="emerald" size="sm">
-              Merged Standalone Checkpoint
+              Model Available
             </Badge>
           </div>
           <span className="text-xs font-mono text-scientific-muted">
@@ -68,7 +68,7 @@ export const ModelCard: React.FC<ModelCardProps> = ({ model }) => {
           </div>
           <div className="bg-background-deep/70 p-3 rounded-lg border border-border">
             <span className="text-[10px] text-scientific-muted block uppercase">Release Format</span>
-            <span className="text-emerald-400 font-semibold">Merged Standalone</span>
+            <span className="text-emerald-400 font-semibold">Model Available</span>
           </div>
         </div>
 

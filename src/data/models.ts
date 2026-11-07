@@ -96,7 +96,7 @@ export const models: ModelRelease[] = [
     access: {
       huggingFaceUrl: 'https://huggingface.co/Stellar-lab/Stellar-Qwen3-8B-ARM',
       modelType: 'Reward Model (Causal LM Head with Decomposed Projection)',
-      checkpointType: 'Merged Standalone Checkpoint (Weights fully integrated)',
+      checkpointType: 'Model Available (Weights fully integrated)',
       license: 'Research Open-Source (Apache 2.0)',
     },
   },

@@ -42,7 +42,7 @@ export const Projects: React.FC = () => {
                 Founding Research Project
               </Badge>
               <Badge variant="emerald" size="sm">
-                Merged Standalone Checkpoint Release
+                Model Available
               </Badge>
             </div>
             <span className="text-xs font-mono text-scientific-muted">

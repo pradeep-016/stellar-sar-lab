@@ -237,7 +237,7 @@ export const ArmArchitectureDiagram: React.FC = () => {
 
           <div className="flex items-center gap-2">
             <Badge variant="emerald" size="sm">
-              Merged Standalone Checkpoint
+              Model Available
             </Badge>
           </div>
         </div>
@@ -247,7 +247,7 @@ export const ArmArchitectureDiagram: React.FC = () => {
       <div className="mt-6 flex items-start gap-2.5 text-xs text-scientific-muted border-t border-border pt-4">
         <AlertCircle className="w-4 h-4 text-scientific-dim flex-shrink-0 mt-0.5" />
         <p>
-          <strong>Methodological note:</strong> Architectural breakdown distinguishes the conceptual multi-dimensional formulation from verified implementation hyperparameters. Weights are released as merged standalone checkpoints upon publication.
+          <strong>Methodological note:</strong> Architectural breakdown distinguishes the conceptual multi-dimensional formulation from verified implementation hyperparameters. Model checkpoints are available upon publication.
         </p>
       </div>
     </div>

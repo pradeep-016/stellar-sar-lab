@@ -19,7 +19,7 @@ export const projects: ResearchProject[] = [
       'Trained across 7,500 curated preference pairs with multi-attribute annotations',
       'Consistency regularization to penalize conflicting dimension signals',
       'Validation, checkpointing, and robust training resumption infrastructure',
-      'Merged standalone checkpoint release (not an adapter-only release)',
+      'Model is available as an open checkpoint release (not an adapter-only release)',
     ],
     experimentalSetup: {
       hardware: 'Dual NVIDIA T4 GPUs (2x 16GB VRAM)',
@@ -33,7 +33,7 @@ export const projects: ResearchProject[] = [
       'Fine-tuning Framework': 'QLoRA (Quantized Low-Rank Adaptation)',
       'Training Dataset Size': '7,500 annotated preference pairs',
       'Compute Hardware': 'Dual NVIDIA T4 GPUs',
-      'Model Architecture': 'Merged standalone checkpoint',
+      'Model Status': 'Model is available',
       'Supervision Scheme': '6-dimensional preference supervision + consistency loss',
     },
     dimensions: [

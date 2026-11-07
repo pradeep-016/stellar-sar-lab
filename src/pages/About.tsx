@@ -33,7 +33,7 @@ export const About: React.FC = () => {
     },
     {
       title: 'Transparent Reporting & Open Checkpoints',
-      desc: 'Scientific progress requires total reproducibility. We publish full evaluation scripts, exact hyperparameters, and standalone merged model weights rather than un-auditable closed snapshots.',
+      desc: 'Scientific progress requires total reproducibility. We publish full evaluation scripts, exact hyperparameters, and open model checkpoints rather than un-auditable closed snapshots.',
       icon: <FileCode className="w-5 h-5 text-emerald-400" />,
     },
     {

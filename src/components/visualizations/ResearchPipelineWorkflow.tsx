@@ -95,7 +95,7 @@ export const ResearchPipelineWorkflow: React.FC = () => {
       shortName: '6. Release',
       icon: <Share2 className="w-5 h-5 text-sky-400" />,
       summary:
-        'Publish open-source code repositories, standalone merged model checkpoints, evaluation datasets, and academic papers.',
+        'Publish open-source code repositories, model checkpoints, evaluation datasets, and academic papers.',
       practices: [
         'Release reproducible evaluation scripts on GitHub.',
         'Publish full standalone model checkpoints on Hugging Face.',

@@ -102,7 +102,7 @@ export const Models: React.FC = () => {
             </div>
             <div className="bg-background-card p-3 rounded-xl border border-border">
               <span className="text-[10px] text-scientific-muted block uppercase">Checkpoint</span>
-              <span className="text-emerald-400 font-bold text-sm">Merged Weights</span>
+              <span className="text-emerald-400 font-bold text-sm">Model Available</span>
             </div>
           </div>
         </div>
