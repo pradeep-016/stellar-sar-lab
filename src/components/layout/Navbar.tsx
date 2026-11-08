@@ -51,10 +51,10 @@ export const Navbar: React.FC = () => {
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
                 <span className="font-bold tracking-tight text-white font-display text-lg sm:text-xl">
-                  Stellar<span className="text-accent-blue">Lab</span>
+                  Stellar<span className="text-accent-blue"> ASION</span>
                 </span>
                 <span className="hidden sm:inline-block text-[10px] font-mono uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 px-1.5 py-0.5 rounded border border-accent-cyan/20">
-                  ASION
+                  RESEARCH
                 </span>
               </div>
               <span className="text-[10px] sm:text-[11px] font-mono text-scientific-muted tracking-wider uppercase -mt-0.5">

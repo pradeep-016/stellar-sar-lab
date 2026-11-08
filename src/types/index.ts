@@ -104,6 +104,7 @@ export interface ModelRelease {
     hardware: string;
     preferencePairs: number;
     trainingObjective: string;
+    dataPipeline?: string;
   };
   supervisionDimensions: {
     name: string;

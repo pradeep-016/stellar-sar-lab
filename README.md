@@ -1,16 +1,15 @@
 <div align="center">
 
-<img src="./public/logo.png" alt="StellarLab Logo" width="120" height="120" />
+<img src="./public/logo.png" alt="Stellar ASION Logo" width="120" height="120" />
 
-# StellarLab
-### Stellar Safety & Alignment Research Lab (Stellar SAR Lab)
+# Stellar ASION
 
 [![Live Site](https://img.shields.io/badge/Live_Site-GitHub_Pages-38bdf8?style=for-the-badge&logo=github)](https://pradeep-016.github.io/stellar-sar-lab/)
 [![Founding Project](https://img.shields.io/badge/Founding_Project-ARM_(Qwen3--8B)-0284c7?style=for-the-badge)](https://pradeep-016.github.io/stellar-sar-lab/#/projects)
 [![Hugging Face](https://img.shields.io/badge/Models-Hugging_Face-f59e0b?style=for-the-badge&logo=huggingface)](https://huggingface.co/Stellar-lab)
 [![License](https://img.shields.io/badge/License-Apache_2.0-818cf8?style=for-the-badge)](LICENSE)
 
-*A newly established independent empirical research initiative investigating learned objectives, reward modeling, and evaluator reliability under optimization pressure.*
+*An independent empirical AI safety initiative investigating learned objectives, reward modeling, and evaluator reliability under optimization pressure.*
 
 </div>
 
@@ -18,38 +17,32 @@
 
 ## 🔬 Scientific Mission & Institutional Identity
 
-**StellarLab** (Stellar Safety & Alignment Research Lab) is a newly established independent research initiative focused on empirical AI safety and alignment research.
+**Stellar ASION** is an independent empirical research initiative investigating AI safety and alignment.
 
 Our core scientific investigation examines how reliable objectives, reward models, and evaluators remain when subjected to optimization pressure:
 
 > **"How reliable are the objectives and evaluators used to guide increasingly capable AI systems, particularly under optimization pressure?"**
 
-*Note on Institutional Scope:* StellarLab is newly established. Its official research journey begins with the Associative Reward Model (ARM). Previous independent research projects and publications by the founder were conducted under personal research activities and are strictly separated from StellarLab's research portfolio.
+*Note on Institutional Scope:* Stellar ASION operates as an independent empirical research initiative. Its official research journey begins with the Associative Reward Model (ARM). Previous independent research projects and publications by the researcher were conducted under personal research activities and are strictly separated from Stellar ASION's research portfolio.
 
 ---
 
-## 🧭 Laboratory Research Interests
+## 🧭 Laboratory Research Pillars
 
-StellarLab will focus on AI Safety and Alignment-related challenges across nine core agendas:
+Stellar ASION focuses on empirical AI Safety and Alignment across three consolidated pillars:
 
-1. **AI Safety & Alignment:** Developing empirical techniques to ensure increasingly capable systems behave reliably in accordance with intended objectives.
-2. **Reward Modeling:** Advancing multi-dimensional preference learning, dimension-level supervision, and representation learning for reward architectures.
-3. **Reward Hacking & Specification Gaming:** Analyzing how optimization systems exploit weaknesses, loopholes, and unintended incentives in learned reward functions.
-4. **Evaluator Reliability:** Investigating the calibration boundaries, consistency, and failure modes of automated judges and reward verifiers.
-5. **Reliability of Learned Objectives:** Probing whether proxy rewards maintain fidelity as generation models are steered and scaled.
-6. **Reward–Quality Divergence:** Measuring the empirical decoupling of proxy evaluator scores from verifiable task correctness (Goodhart's Law in alignment).
-7. **Robustness of AI Evaluation:** Designing evaluation protocols resistant to stylistic perturbations, length biases, and adversarial exploits.
-8. **Optimization-Induced Failures:** Characterizing pathologies that emerge specifically when models undergo intense test-time search or policy optimization.
-9. **Alignment of Increasingly Capable AI Systems:** Preparing alignment and evaluation methodologies for next-generation foundation models.
+1. **Evaluator Reliability & Search Dynamics:** Investigating Goodhart divergence, verifier degradation, and error amplification across test-time search compute budgets.
+2. **Decomposed Preference Supervision (ARM):** Advancing multi-dimensional reward architectures to disentangle stylistic markers, verbosity, and surface flattery from factual validity.
+3. **Scalable Oversight & Reasoning Faithfulness:** Mitigating sycophancy, post-hoc chain-of-thought rationalization, and evaluator flattery in autonomous models.
 
 ---
 
 ## 📂 Founding Research Project: Associative Reward Model (ARM)
 
-The **Associative Reward Model (ARM)** is the first research project undertaken under StellarLab.
+The **Associative Reward Model (ARM)** is the founding research project undertaken under Stellar ASION.
 
-* **Designation:** StellarLab Founding Research Project
-* **Status:** In Progress / Standalone merged model checkpoint release upon publication.
+* **Designation:** Stellar ASION Founding Research Project
+* **Status:** In Progress / Model checkpoint available upon publication.
 * **Architecture:** Foundation backbone on **Qwen3-8B**, trained with 4-bit NormalFloat (NF4) quantization using **QLoRA** on dual NVIDIA T4 GPUs over 7,500 curated preference pairs.
 * **Core Hypothesis:** Collapsing complex preference signals into an uninterpretable scalar score creates susceptibility to style traps and single-axis gaming. By decomposing evaluation across six explicit dimensions with consistency regularization, ARM isolates genuine task execution from superficial artifacts.
 * **Supervision Dimensions:**
@@ -59,24 +52,25 @@ The **Associative Reward Model (ARM)** is the first research project undertaken 
   4. *Reasoning Validity:* Logical, mathematical, and deductive soundness across the chain of thought.
   5. *Task Correctness:* Domain-grounded accuracy and factual correctness of solutions.
   6. *Communication Quality:* Coherence, clarity, and structural readability.
-* **Loss Formulation:** Pairwise preference objective coupled with dimension-level cross-entropy supervision and consistency regularization penalties.
 * **Reported Benchmark Evaluations:**
-  * RewardBench Evaluation 1: **89.2**
-  * RewardBench Evaluation 2: **74.4**
-  * RM-Bench (Hard Style-Trap): **65.6**
-  * JudgeBench: **62.5**
-* **Artifact Release:** Merged standalone model weights (not an adapter-only release).
+  * RM-Bench (Hard Style-Trap): **67.09%** (vs Skywork-27B 54.00%, GPT-4o 52.80%, ArmoRM-8B 46.80%)
+  * AllenAI RewardBench v1 Core: **89.88%** Overall Macro accuracy (Chat: 94.40%, Reasoning: 90.43%, Safety: 90.45%, General: 90.56%)
+  * JudgeBench: **62.5%**
+* **Artifact Release:** Open model checkpoint on Hugging Face.
 
 ---
 
-## 📄 Publications & Research Portfolio
+## 📄 Publications & Research Outputs
 
-StellarLab is newly established, and its formal publication portfolio is actively being established.
+* **Peer-Reviewed Workshop Acceptance:**
+  * *Evaluator Reliability Under Test-Time Scaling*
+  * Accepted Workshop Paper at **AIAS 2026 Workshop on Lifelong Agents (held in conjunction with LLA 2026)**.
+  * Authors: Pradeep L.
 
-* **Technical Manuscript in Preparation:**
+* **Working Manuscript:**
   * *Associative Reward Model (ARM): Multi-Dimensional Preference Supervision in Language Models*
-  * Details the architectural formulation, 6-dimensional supervision scheme, consistency regularization, and empirical benchmark results on Qwen3-8B.
-  * Research preprint and open-source model weights will be released upon completion.
+  * Technical Report (In Preparation).
+  * Authors: Pradeep L.
 
 ---
 
@@ -84,11 +78,10 @@ StellarLab is newly established, and its formal publication portfolio is activel
 
 * **Core Framework:** React 18 / Vite / TypeScript
 * **Styling & Design Tokens:** Tailwind CSS / CSS Custom Properties
-* **Interactive Research Tools:**
+* **Interactive Tools:**
   * Interactive Three.js / Canvas 2D/3D Constellation Hero Network
-  * Interactive Goodhart Reward–Quality Divergence Explanatory Curve
   * Interactive Best-of-N Candidate Selection Simulator
-  * Interactive ARM 6-Dimension Architecture & Loss Inspector
+  * Interactive ARM Architecture & Loss Inspector
 * **Routing:** HashRouter (100% SPA routing reliability on GitHub Pages static hosting)
 * **Icons:** Lucide React
 
@@ -127,11 +120,11 @@ On push to `main`:
 
 ---
 
-## 🤝 Contact & Institutional Channels
+## 🤝 Contact & Channels
 
-For research collaboration, technical inquiries, and correspondence:
+For research correspondence, collaboration, and inquiries:
 
-* **Contact Email:** [pradeep02272002@gmail.com](mailto:pradeep02272002@gmail.com)
+* **Research Email:** [pradeep.ai.research@zohomail.in](mailto:pradeep.ai.research@zohomail.in)
 * **GitHub Repository:** [https://github.com/pradeep-016/stellar-sar-lab](https://github.com/pradeep-016/stellar-sar-lab)
 * **Hugging Face Organization:** [https://huggingface.co/Stellar-lab](https://huggingface.co/Stellar-lab)
 * **Researcher Profile (Pradeep L):** [https://huggingface.co/Pradeep016](https://huggingface.co/Pradeep016)
@@ -139,5 +132,5 @@ For research collaboration, technical inquiries, and correspondence:
 ---
 
 <div align="center">
-<sub>© 2026 Stellar ASION (Stellar Alignment, Safety, & Inference Optimized Networks). Independent empirical research initiative.</sub>
+<sub>© 2026 Stellar ASION. Independent empirical research initiative.</sub>
 </div>

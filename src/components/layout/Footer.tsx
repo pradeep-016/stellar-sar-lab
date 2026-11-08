@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { siteConfig } from '../../config/site';
-import { Github, Shield } from 'lucide-react';
+import { Github, Shield, ExternalLink } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -13,8 +13,8 @@ export const Footer: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-border/60">
-          {/* Col 1: Brand Identity (spans 6 on desktop) */}
-          <div className="md:col-span-6 space-y-4">
+          {/* Col 1: Brand Identity (spans 5 on desktop) */}
+          <div className="md:col-span-5 space-y-4">
             <Link to="/" className="flex items-center gap-3 group">
               <div className="w-10 h-10 flex-shrink-0">
                 <img
@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="text-sm text-scientific-slate leading-relaxed max-w-md">
-              Stellar ASION is an independent research initiative investigating empirical AI safety, reward modeling, evaluator reliability, and alignment under optimization pressure.
+              {siteConfig.description}
             </p>
 
             <div className="pt-2 flex items-center gap-3">
@@ -61,10 +61,10 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Col 2: Research & Artifacts (spans 3 on desktop) */}
-          <div className="md:col-span-3">
+          {/* Col 2: Research Pillars (spans 4 on desktop) */}
+          <div className="md:col-span-4">
             <h4 className="text-xs font-mono font-semibold text-white uppercase tracking-wider mb-4">
-              Research & Artifacts
+              Research Pillars
             </h4>
             <ul className="space-y-2.5 text-sm">
               {siteConfig.footerLinks.research.map((link) => (
@@ -80,20 +80,32 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Col 3: Laboratory (spans 3 on desktop) */}
+          {/* Col 3: Initiative & Resources (spans 3 on desktop) */}
           <div className="md:col-span-3">
             <h4 className="text-xs font-mono font-semibold text-white uppercase tracking-wider mb-4">
-              Laboratory
+              Initiative
             </h4>
             <ul className="space-y-2.5 text-sm">
-              {siteConfig.footerLinks.laboratory.map((link) => (
+              {siteConfig.footerLinks.resources.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    to={link.href}
-                    className="text-scientific-slate hover:text-accent-blue transition-colors block"
-                  >
-                    {link.label}
-                  </Link>
+                  {link.href.startsWith('http') ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-scientific-slate hover:text-accent-blue transition-colors flex items-center gap-1.5"
+                    >
+                      <span>{link.label}</span>
+                      <ExternalLink className="w-3 h-3 text-scientific-muted" />
+                    </a>
+                  ) : (
+                    <Link
+                      to={link.href}
+                      className="text-scientific-slate hover:text-accent-blue transition-colors block"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -103,12 +115,12 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar: Copyright & Compliance */}
         <div className="mt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-scientific-muted">
           <div>
-            © {currentYear} {siteConfig.fullName} (Stellar ASION). All rights reserved.
+            © {currentYear} {siteConfig.name}. All rights reserved.
           </div>
 
           <div className="flex items-center gap-2 text-scientific-dim text-center md:text-right">
             <Shield className="w-3.5 h-3.5 text-scientific-muted flex-shrink-0" />
-            <span>Independent empirical AI safety initiative. Not a registered corporation or university entity.</span>
+            <span>Independent empirical AI safety initiative.</span>
           </div>
         </div>
       </div>

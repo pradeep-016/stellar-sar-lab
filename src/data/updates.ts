@@ -7,9 +7,9 @@ export const updates: ResearchUpdate[] = [
     category: 'Acceptance',
     title: 'Paper Accepted at AIAS 2026 Workshop on Lifelong Agents (held with LLA 2026)',
     summary:
-      'Research paper "Evaluator Reliability Under Test-Time Scaling" accepted for poster presentation at AIAS 2026.',
+      'Research paper "Evaluator Reliability Under Test-Time Scaling" accepted as a workshop paper at AIAS 2026.',
     content:
-      'Controlled empirical evaluation investigating Goodhart divergence across candidate pools on GSM8K and HumanEval has been accepted for poster presentation at the AIAS 2026 Workshop on Lifelong Agents (in conjunction with LLA 2026). The work characterizes where proxy reward models decouple from verifiable task correctness under Best-of-N search.',
+      'Controlled empirical evaluation investigating Goodhart divergence across candidate pools on GSM8K and HumanEval has been accepted as a workshop paper at the AIAS 2026 Workshop on Lifelong Agents (in conjunction with LLA 2026). The work characterizes where proxy reward models decouple from verifiable task correctness under Best-of-N search.',
     links: [
       { label: 'View Publications Portfolio', url: '/publications' },
       { label: 'Replication Code on GitHub', url: 'https://github.com/pradeep-016' },
@@ -23,7 +23,7 @@ export const updates: ResearchUpdate[] = [
     summary:
       'Stellar ASION establishes its independent research initiative investigating empirical AI safety, reward modeling, and evaluator reliability.',
     content:
-      'Stellar ASION (Stellar Alignment, Safety, & Inference Optimized Networks) is established to investigate the reliability of learned objectives and evaluators used to guide increasingly capable AI systems. Operating as an independent empirical initiative, the research focuses on empirical rigor, open-source models, and transparent evaluation protocols.',
+      'Stellar ASION is established to investigate the reliability of learned objectives and evaluators used to guide increasingly capable AI systems. Operating as an independent empirical initiative, the research focuses on empirical rigor, open-source models, and transparent evaluation protocols.',
     links: [
       { label: 'About Stellar ASION', url: '/about' },
       { label: 'Explore Research Agenda', url: '/research' },

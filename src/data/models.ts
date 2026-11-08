@@ -19,6 +19,8 @@ export const models: ModelRelease[] = [
       preferencePairs: 7500,
       trainingObjective:
         'Pairwise preference loss with dimension-level cross-entropy and consistency regularization',
+      dataPipeline:
+        '10-shard partitioned preference reservoir featuring cryptographic prompt-hash deduplication (True Train-Test Overlap: 0), calculator cheat-token sanitization (clean_math_text), adversarial mutation engines (VERBOSE_TEMPLATES) for style-trap inoculation, and 7-regime length-ratio balancing.',
     },
     supervisionDimensions: [
       {

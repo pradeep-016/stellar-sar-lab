@@ -2,13 +2,13 @@ export const siteConfig = {
   name: 'Stellar ASION',
   fullName: 'Stellar Alignment, Safety, & Inference Optimized Networks',
   shortName: 'Stellar ASION',
-  tagline: 'Alignment, Safety, & Inference Optimized Networks',
+  tagline: 'Safety-First Frontier Model Development',
   statusLabel: 'INDEPENDENT AI SAFETY & ALIGNMENT RESEARCH',
-  foundingLabel: 'EMPIRICAL RESEARCH INITIATIVE',
+  foundingLabel: 'SAFETY-FIRST FRONTIER AI INITIATIVE',
   centralQuestion:
-    'How reliable are the objectives and evaluators used to guide increasingly capable AI systems, particularly under optimization pressure?',
+    'Can frontier AI systems be developed with safety, alignment, and verifiability engineered natively into their foundation from inception, rather than bolted on post-hoc through superficial fine-tuning?',
   description:
-    'Stellar ASION (Stellar Alignment, Safety, & Inference Optimized Networks) is an independent research initiative investigating AI safety, alignment, reward modeling, and the reliability of learned objectives and evaluators under optimization pressure.',
+    'Stellar ASION is an independent research initiative pioneering safety-first frontier model development: co-designing foundational architectures, curated training corpora, optimization dynamics, and inference verification from day one.',
   url: 'https://pradeep-016.github.io/stellar-sar-lab/',
   contactEmail: 'pradeep.ai.research@zohomail.in',
   contactEmailDisplay: 'pradeep.ai.research@zohomail.in',
@@ -23,16 +23,28 @@ export const siteConfig = {
   ],
   footerLinks: {
     research: [
-      { label: 'Research Agenda', href: '/research' },
-      { label: 'Founding Project: ARM', href: '/projects' },
-      { label: 'Model Releases', href: '/models' },
+      { label: 'Native Alignment by Design', href: '/research#native-alignment-safety' },
+      { label: 'Inference Scaling & Verification', href: '/research#inference-scaling-dynamics' },
+      { label: 'Optimization & Goodhart Boundaries', href: '/research#optimization-boundaries' },
+      { label: 'Inference-Optimized Networks', href: '/research#optimized-network-architectures' },
+    ],
+    projects: [
+      { label: 'Founding Architecture: ARM', href: '/projects' },
+      { label: 'Model Releases (ARM)', href: '/models' },
+    ],
+    resources: [
+      { label: 'About Mission', href: '/about' },
+      { label: 'Researcher Profile', href: '/researcher' },
       { label: 'Publications', href: '/publications' },
+      { label: 'Research Updates', href: '/updates' },
+      { label: 'Contact & Inquiries', href: '/contact' },
+      { label: 'GitHub Repository', href: 'https://github.com/pradeep-016/stellar-sar-lab' },
     ],
     laboratory: [
       { label: 'About Mission', href: '/about' },
       { label: 'Researcher Profile', href: '/researcher' },
       { label: 'Research Updates', href: '/updates' },
-      { label: 'Contact', href: '/contact' },
+      { label: 'Contact & Inquiries', href: '/contact' },
     ],
   },
 };

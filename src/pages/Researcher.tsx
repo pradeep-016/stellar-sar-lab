@@ -19,6 +19,8 @@ import {
   Compass,
   FileText,
   Search,
+  ShieldCheck,
+  AlertTriangle,
 } from 'lucide-react';
 
 export const Researcher: React.FC = () => {
@@ -79,11 +81,11 @@ export const Researcher: React.FC = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mt-3 mb-3 font-display">
             Pradeep L
           </h1>
-          <p className="text-base sm:text-lg font-mono text-accent-cyan mb-4">
-            AI Alignment & Empirical Evaluation
+          <p className="text-base sm:text-lg font-mono text-accent-cyan mb-3">
+            Independent AI Alignment Researcher • Stellar ASION
           </p>
           <p className="text-base sm:text-lg text-scientific-slate leading-relaxed mb-8">
-            Independent AI researcher investigating reward hacking, evaluator reliability, and reward–quality divergence under optimization pressure in language models.
+            Investigating reward hacking, evaluator reliability, and Goodhart divergence under optimization pressure in frontier language models.
           </p>
 
           {/* Quick Links Row */}
@@ -146,35 +148,147 @@ export const Researcher: React.FC = () => {
           </div>
         </div>
 
-        {/* Section 1: Research Profile Overview */}
+        {/* Section 1: About Me & Bio */}
         <div className="mb-16">
           <div className="bg-background-surface/80 border border-border rounded-2xl p-8 md:p-10 backdrop-blur-md">
             <span className="text-xs font-mono text-accent-cyan uppercase tracking-wider block mb-3">
-              RESEARCH PROFILE
+              ABOUT ME
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 font-display">
-              Empirical AI Safety Agenda
+              Background & Overview
             </h2>
-            <p className="text-scientific-slate text-sm sm:text-base leading-relaxed mb-6">
-              Independent AI researcher investigating reward hacking, evaluator reliability, and reward–quality divergence under optimization pressure in language models. Developed STELLAR-ARM, a multi-dimensional associative reward architecture incorporating causal DAG-based dimension interactions and Softmin-based monotonicity constraints to investigate and mitigate style- and length-related reward biases. Experienced in multi-objective preference modeling, Best-of-N selection audits, hypothesis testing, and reproducible empirical evaluation pipelines under constrained compute.
-            </p>
+            <div className="space-y-4 text-scientific-slate text-sm sm:text-base leading-relaxed">
+              <p>
+                I am an independent AI researcher working on empirical AI safety, alignment, and evaluator reliability. My work focuses on investigating how learned reward models, verifiers, and automated objectives fail when subjected to optimization pressure and test-time search.
+              </p>
+              <p>
+                To address vulnerability to stylistic heuristics and length bias in scalar reward models, I developed <strong className="text-white">STELLAR-ARM</strong>—a multi-dimensional associative reward architecture that supervises six decomposed rubric dimensions using directional causal attention masking and Softmin-based monotonicity constraints.
+              </p>
+              <p>
+                My methodology emphasizes controlled empirical evaluation, paired bootstrap hypothesis testing with multiple-testing corrections, and reproducible evaluation pipelines designed to run efficiently on compute-constrained hardware (dual NVIDIA T4 GPUs).
+              </p>
+            </div>
+          </div>
+        </div>
 
-            <div className="flex flex-wrap gap-2 pt-2 border-t border-border/60">
-              <span className="px-3 py-1 rounded-lg bg-background-deep border border-border text-xs font-mono text-scientific-slate">
-                Multi-Objective Preference Modeling
-              </span>
-              <span className="px-3 py-1 rounded-lg bg-background-deep border border-border text-xs font-mono text-scientific-slate">
-                Best-of-N Selection Audits
-              </span>
-              <span className="px-3 py-1 rounded-lg bg-background-deep border border-border text-xs font-mono text-scientific-slate">
-                Paired Bootstrap Hypothesis Testing
-              </span>
-              <span className="px-3 py-1 rounded-lg bg-background-deep border border-border text-xs font-mono text-scientific-slate">
-                Holm-Bonferroni Correction
-              </span>
-              <span className="px-3 py-1 rounded-lg bg-background-deep border border-border text-xs font-mono text-scientific-slate">
-                Constrained Compute (Dual NVIDIA T4)
-              </span>
+        {/* Section 2: Research Interests */}
+        <div className="mb-16">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="text-xs font-mono uppercase tracking-wider text-accent-cyan">
+              CORE INVESTIGATIONS
+            </span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8 font-display">
+            Research Interests
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Interest 1 */}
+            <div className="bg-background-surface/80 border border-border/80 hover:border-accent-blue/50 rounded-2xl p-6 sm:p-7 backdrop-blur-md transition-all duration-300 group">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2.5 rounded-xl bg-background-elevated border border-border text-accent-blue group-hover:border-accent-blue/40 transition-colors">
+                  <ShieldCheck className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white font-display group-hover:text-accent-blue transition-colors">
+                    Reward Modeling & Preference Learning
+                  </h3>
+                  <span className="text-xs font-mono text-scientific-muted">
+                    Multi-Dimensional Representation & Inductive Biases
+                  </span>
+                </div>
+              </div>
+              <p className="text-xs sm:text-sm text-scientific-slate leading-relaxed mb-4">
+                Designing evaluator architectures that prevent policies from exploiting scalar reward bottlenecks. Developing multi-attribute vector supervision, causal attention masking between rubric criteria, and Softmin monotonicity constraints to inoculate models against verbosity, sycophancy, and style shortcuts.
+              </p>
+              <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/60">
+                {['Multi-Objective Preference Loss', 'Causal Attention Masking', 'Softmin Readouts', 'Anti-Verbosity Curation'].map((tag) => (
+                  <span key={tag} className="px-2.5 py-1 rounded-md bg-background-deep border border-border/80 text-[11px] font-mono text-scientific-slate">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Interest 2 */}
+            <div className="bg-background-surface/80 border border-border/80 hover:border-accent-cyan/50 rounded-2xl p-6 sm:p-7 backdrop-blur-md transition-all duration-300 group">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2.5 rounded-xl bg-background-elevated border border-border text-accent-cyan group-hover:border-accent-cyan/40 transition-colors">
+                  <Cpu className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white font-display group-hover:text-accent-cyan transition-colors">
+                    Evaluator Reliability & Search Dynamics
+                  </h3>
+                  <span className="text-xs font-mono text-scientific-muted">
+                    Inference-Time Scaling & Verifier Degradation
+                  </span>
+                </div>
+              </div>
+              <p className="text-xs sm:text-sm text-scientific-slate leading-relaxed mb-4">
+                Characterizing the breakdown points of automated verifiers and process reward models (PRMs) under deep test-time search (Best-of-N and tree search). Analyzing how subtle evaluator scoring errors are exponentially amplified as search candidate budgets scale.
+              </p>
+              <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/60">
+                {['Best-of-N Search Audits', 'Process Reward Models (PRMs)', 'Error Propagation', 'Candidate Scaling (N=1..256)'].map((tag) => (
+                  <span key={tag} className="px-2.5 py-1 rounded-md bg-background-deep border border-border/80 text-[11px] font-mono text-scientific-slate">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Interest 3 */}
+            <div className="bg-background-surface/80 border border-border/80 hover:border-amber-400/50 rounded-2xl p-6 sm:p-7 backdrop-blur-md transition-all duration-300 group">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2.5 rounded-xl bg-background-elevated border border-border text-amber-400 group-hover:border-amber-400/40 transition-colors">
+                  <AlertTriangle className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white font-display group-hover:text-amber-400 transition-colors">
+                    Goodhart Divergence & Objective Gaming
+                  </h3>
+                  <span className="text-xs font-mono text-scientific-muted">
+                    Specification Gaming & Phase Transitions
+                  </span>
+                </div>
+              </div>
+              <p className="text-xs sm:text-sm text-scientific-slate leading-relaxed mb-4">
+                Measuring and formulating empirical phase transitions where proxy reward maximization decouples from true intent and ground-truth task correctness. Establishing early-warning statistical telemetry to detect proxy overoptimization before policy degradation occurs.
+              </p>
+              <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/60">
+                {['Goodhart Phase Transitions', 'Metric Saturation', 'Verifiable Ground-Truth Audits', 'Specification Gaming'].map((tag) => (
+                  <span key={tag} className="px-2.5 py-1 rounded-md bg-background-deep border border-border/80 text-[11px] font-mono text-scientific-slate">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Interest 4 */}
+            <div className="bg-background-surface/80 border border-border/80 hover:border-accent-violet/50 rounded-2xl p-6 sm:p-7 backdrop-blur-md transition-all duration-300 group">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2.5 rounded-xl bg-background-elevated border border-border text-accent-violet group-hover:border-accent-violet/40 transition-colors">
+                  <LineChart className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white font-display group-hover:text-accent-violet transition-colors">
+                    Empirical Rigor & Constrained-Compute Evaluation
+                  </h3>
+                  <span className="text-xs font-mono text-scientific-muted">
+                    Statistical Testing & Clean-Room Verification
+                  </span>
+                </div>
+              </div>
+              <p className="text-xs sm:text-sm text-scientific-slate leading-relaxed mb-4">
+                Enforcing rigorous statistical protocols for preference evaluations, including paired bootstrap hypothesis testing with Holm-Bonferroni corrections and cryptographic train-test benchmark leakage audits. Democratizing safety research on accessible dual-GPU hardware.
+              </p>
+              <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/60">
+                {['Paired Bootstrap Testing', 'Holm-Bonferroni Correction', 'Zero Benchmark Contamination', '4-Bit NF4 QLoRA Efficiency'].map((tag) => (
+                  <span key={tag} className="px-2.5 py-1 rounded-md bg-background-deep border border-border/80 text-[11px] font-mono text-scientific-slate">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -282,7 +396,7 @@ export const Researcher: React.FC = () => {
               <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
                 <div className="flex items-center gap-2">
                   <Badge variant="blue" size="sm" icon={<Award className="w-3.5 h-3.5" />}>
-                    WORKSHOP POSTER ACCEPTANCE
+                    ACCEPTED WORKSHOP PAPER
                   </Badge>
                   <span className="text-xs font-mono text-scientific-muted">
                     AIAS 2026 (held with LLA 2026)
@@ -340,7 +454,7 @@ export const Researcher: React.FC = () => {
                   <strong className="text-white">Statistical Verification:</strong> Applied paired bootstrap hypothesis tests and multiple-testing corrections (Holm-Bonferroni) to verify the statistical significance of evaluator score differences across selection budgets.
                 </li>
                 <li>
-                  <strong className="text-white">Peer Recognition:</strong> Accepted for poster presentation at the AIAS 2026 Workshop on Lifelong Agents: Learning, Aligning, and Evolving (LLA).
+                  <strong className="text-white">Peer Recognition:</strong> Accepted as a workshop paper at the AIAS 2026 Workshop on Lifelong Agents: Learning, Aligning, and Evolving (LLA).
                 </li>
               </ul>
 

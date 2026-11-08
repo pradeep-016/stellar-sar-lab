@@ -6,16 +6,13 @@ import { projects } from '../data/projects';
 import { publications } from '../data/publications';
 import { models } from '../data/models';
 import { HeroConstellation } from '../components/visualizations/HeroConstellation';
-import { RewardQualityDivergenceChart } from '../components/visualizations/RewardQualityDivergenceChart';
 import { ResearchCard } from '../components/cards/ResearchCard';
 import { ProjectCard } from '../components/cards/ProjectCard';
 import { PublicationCard } from '../components/cards/PublicationCard';
 import { Badge } from '../components/common/Badge';
 import {
   ArrowRight,
-  Sparkles,
   ChevronRight,
-  BookOpen,
 } from 'lucide-react';
 
 export const Home: React.FC = () => {
@@ -42,15 +39,15 @@ export const Home: React.FC = () => {
 
           {/* Primary Headline */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-[1.1] mb-6 font-display">
-            Advancing the Reliability and Safety of{' '}
+            Architecting Frontier AI from the Perspective of{' '}
             <span className="bg-gradient-to-r from-accent-blue via-accent-cyan to-accent-violet bg-clip-text text-transparent">
-              Intelligent Systems.
+              Native Safety.
             </span>
           </h1>
 
           {/* Supporting Statement */}
           <p className="text-base sm:text-xl text-scientific-slate max-w-3xl mx-auto leading-relaxed mb-10">
-            {siteConfig.description}
+            Challenging the post-hoc alignment paradigm. We investigate how to engineer alignment, verifiable inference, and anti-gaming constraints directly into foundational training loops and network architectures from inception.
           </p>
 
           {/* Primary & Secondary CTAs */}
@@ -59,7 +56,7 @@ export const Home: React.FC = () => {
               to="/projects"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-mono text-sm font-bold bg-accent-blue text-background-deep hover:bg-sky-300 shadow-lg shadow-accent-blue/20 hover:shadow-accent-blue/35 transition-all duration-200"
             >
-              <span>Founding Project: ARM</span>
+              <span>Founding Architecture: ARM</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
 
@@ -67,27 +64,27 @@ export const Home: React.FC = () => {
               to="/research"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-mono text-sm font-semibold bg-background-elevated hover:bg-slate-800 text-white border border-border hover:border-slate-600 transition-all duration-200"
             >
-              <span>Research Agenda</span>
+              <span>Frontier Safety Agenda</span>
             </Link>
           </div>
 
           {/* Micro Telemetry Bar */}
           <div className="mt-16 pt-8 border-t border-border/40 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left font-mono text-xs">
             <div className="p-3 bg-background-surface/50 rounded-lg border border-border/60">
-              <span className="text-scientific-muted block text-[10px]">ORGANIZATIONAL STATUS</span>
-              <span className="text-white font-semibold">Independent Research Initiative</span>
+              <span className="text-scientific-muted block text-[10px]">RESEARCH PARADIGM</span>
+              <span className="text-white font-semibold">Safety-First Inception</span>
             </div>
             <div className="p-3 bg-background-surface/50 rounded-lg border border-border/60">
-              <span className="text-scientific-muted block text-[10px]">FOUNDING RESEARCH</span>
+              <span className="text-scientific-muted block text-[10px]">FOUNDING ARCHITECTURE</span>
               <span className="text-accent-blue font-semibold">Associative Reward Model</span>
             </div>
             <div className="p-3 bg-background-surface/50 rounded-lg border border-border/60">
-              <span className="text-scientific-muted block text-[10px]">CORE EMPIRICAL FOCUS</span>
-              <span className="text-accent-cyan font-semibold">AI Safety & Alignment</span>
+              <span className="text-scientific-muted block text-[10px]">EMPIRICAL DISCIPLINE</span>
+              <span className="text-accent-cyan font-semibold">Curated Corpora & Verifiers</span>
             </div>
             <div className="p-3 bg-background-surface/50 rounded-lg border border-border/60">
-              <span className="text-scientific-muted block text-[10px]">FOUNDATION BACKBONE</span>
-              <span className="text-accent-violet font-semibold">Qwen3-8B (4-bit QLoRA)</span>
+              <span className="text-scientific-muted block text-[10px]">ACCESSIBLE EFFICIENCY</span>
+              <span className="text-accent-violet font-semibold">4-Bit NF4 QLoRA on 8B</span>
             </div>
           </div>
         </div>
@@ -99,16 +96,16 @@ export const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 space-y-6">
               <Badge variant="cyan" size="sm">
-                RESEARCH PHILOSOPHY
+                LAB'S VISION
               </Badge>
               <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight font-display">
-                Investigating Evaluators Under Optimization Pressure
+                Moving Beyond the Post-Hoc RLHF Patch
               </h2>
               <p className="text-base text-scientific-slate leading-relaxed">
-                Stellar ASION is an independent empirical research initiative investigating AI safety and alignment. Increasingly capable language models are guided, steered, and evaluated by learned reward models and automated proxies.
+                Current frontier AI models treat alignment as an afterthought: pre-training an unconstrained black box on raw web text, then applying a superficial fine-tuning patch at the end. This post-hoc veneer routinely shatters under jailbreaks, sycophancy, and optimization pressure.
               </p>
               <p className="text-base text-scientific-slate leading-relaxed">
-                Our scientific agenda focuses on understanding the failure modes of learned objectives—including specification gaming, reward hacking, Goodhart divergence, and the limits of automated evaluation.
+                Stellar ASION pioneers a ground-up alternative: native alignment by design. We co-design training data curation, multi-dimensional supervision objectives, inference-time verification, and network architectures so that safety is intrinsic to the model from its first gradient update.
               </p>
               <div className="pt-2">
                 <Link
@@ -136,39 +133,18 @@ export const Home: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-border/80 text-xs font-mono">
                 <div>
                   <span className="text-scientific-muted block">INVESTIGATION AXIS 1</span>
-                  <span className="text-white font-medium">Reward Modeling</span>
+                  <span className="text-white font-medium">Native Safety Objectives</span>
                 </div>
                 <div>
                   <span className="text-scientific-muted block">INVESTIGATION AXIS 2</span>
-                  <span className="text-white font-medium">Evaluator Reliability</span>
+                  <span className="text-white font-medium">In-Loop Inference Verification</span>
                 </div>
                 <div>
                   <span className="text-scientific-muted block">INVESTIGATION AXIS 3</span>
-                  <span className="text-white font-medium">Reward Hacking Dynamics</span>
+                  <span className="text-white font-medium">Gaming-Resistant Architectures</span>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* INTERACTIVE RESEARCH DEMONSTRATION WIDGET */}
-      <section className="py-20 border-t border-border/80 bg-background-surface/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <Badge variant="blue" size="sm">
-              CONCEPTUAL VISUALIZATION
-            </Badge>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-3 mb-4 font-display">
-              Visualizing Reward–Quality Divergence
-            </h2>
-            <p className="text-sm sm:text-base text-scientific-slate">
-              A conceptual illustration of Goodhart's Law in AI alignment: how proxy reward scores can continue rising while underlying task quality decouples.
-            </p>
-          </div>
-
-          <div className="max-w-5xl mx-auto">
-            <RewardQualityDivergenceChart />
           </div>
         </div>
       </section>
@@ -179,13 +155,13 @@ export const Home: React.FC = () => {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
               <Badge variant="blue" size="sm">
-                RESEARCH INTERESTS
+                FRONTIER SAFETY AGENDA
               </Badge>
               <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-3 font-display">
-                Laboratory Research Directions
+                Foundational Pillars of Safety-First Model Development
               </h2>
               <p className="text-base text-scientific-slate mt-2 max-w-2xl">
-                The core questions and technical agendas guiding Stellar ASION's empirical AI safety program.
+                How Stellar ASION co-designs the entire intelligence stack—from curated data ingestion to inference search—around native safety.
               </p>
             </div>
 
@@ -198,9 +174,9 @@ export const Home: React.FC = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {researchDirections.map((direction) => (
-              <ResearchCard key={direction.id} direction={direction} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {researchDirections.map((direction, idx) => (
+              <ResearchCard key={direction.id} direction={direction} index={idx} />
             ))}
           </div>
         </div>
@@ -212,13 +188,13 @@ export const Home: React.FC = () => {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
               <Badge variant="violet" size="sm">
-                FOUNDING RESEARCH INITIATIVE
+                FOUNDING ARCHITECTURAL ARTIFACT
               </Badge>
               <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-3 font-display">
-                Stellar ASION's Founding Research Project
+                Decomposing Qualitative Judgment at the Architecture Level
               </h2>
               <p className="text-base text-scientific-slate mt-2 max-w-2xl">
-                Stellar ASION's research journey begins with the Associative Reward Model (ARM), investigating multi-dimensional preference supervision on an open Qwen3-8B backbone.
+                Our research begins with the Associative Reward Model (ARM), demonstrating that replacing scalar reward bottlenecks with decomposed multi-dimensional vector heads prevents policies from exploiting stylistic loopholes (e.g., verbosity and flattery) while preserving factual ground truth.
               </p>
             </div>
 
@@ -365,17 +341,6 @@ export const Home: React.FC = () => {
               className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-mono text-sm font-semibold bg-background-elevated hover:bg-slate-800 text-white border border-border hover:border-slate-600 transition-colors"
             >
               Explore GitHub Repository
-            </a>
-          </div>
-
-          <div className="mt-8 text-xs font-mono text-scientific-muted">
-            Direct correspondence:{' '}
-            <a
-              href={`mailto:${siteConfig.contactEmail}`}
-              className="text-accent-blue hover:underline"
-              title={`Send email to ${siteConfig.contactEmail}`}
-            >
-              {siteConfig.contactEmailDisplay}
             </a>
           </div>
         </div>

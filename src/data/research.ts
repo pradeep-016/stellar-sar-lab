@@ -2,169 +2,107 @@ import { ResearchDirection } from '../types';
 
 export const researchDirections: ResearchDirection[] = [
   {
-    id: 'ai-safety-alignment',
-    slug: 'ai-safety-alignment',
-    title: 'AI Safety & Alignment',
+    id: 'native-alignment-safety',
+    slug: 'native-alignment-safety',
+    title: 'Native Alignment & Data Curation by Design',
     shortDescription:
-      'Investigating reliability, robustness, and alignment dynamics as intelligent systems increase in reasoning capability and autonomous agency.',
+      'Replacing superficial post-hoc RLHF patches with intrinsic multi-dimensional supervision and adversarially curated, contamination-free training corpora.',
     fullDescription:
-      'As artificial intelligence systems are tasked with longer reasoning chains and autonomous decision-making, ensuring their behaviors remain aligned with human intent is paramount. Stellar ASION investigates the fundamental structural and empirical challenges of alignment, focusing on verifiable safety bounds, robust adherence to constraints, and failure modes that emerge under strong optimization.',
+      'Standard frontier models treat safety as an afterthought—pre-training an unconstrained black box on raw web text and patching behavior with post-hoc fine-tuning. This creates fragile models prone to alignment faking, sycophancy, and jailbreaks. We investigate native alignment by design: embedding decomposed, multi-attribute supervision directly into early training and data curation to prevent specification gaming and deceptive shortcuts before they form.',
     keyThemes: [
-      'Empirical AI safety methodologies and diagnostic benchmarks',
-      'Robustness of alignment under extreme prompting and test-time search',
-      'Preservation of intent across open-domain and distribution-shifted tasks',
-      'Auditability and interpretability of learned reward representations',
-      'De-escalation of deceptive alignment and surface-level compliance',
+      'Native alignment objectives vs. post-hoc RLHF/DPO patching',
+      'Adversarial mutation engines generating synthetic hard negatives for style-trap inoculation',
+      'Cryptographic prompt hashing ensuring zero train-test benchmark contamination',
+      'Decomposed qualitative supervision eliminating sycophantic flattery and length bias',
     ],
     coreQuestions: [
-      'How do alignment guarantees hold up when models are steered by learned evaluators rather than direct ground-truth supervision?',
-      'What mechanisms reliably differentiate genuine understanding of safety constraints from opportunistic surface conformity?',
-      'How can alignment techniques prevent models from discovering catastrophic shortcuts during inference?',
+      'Why do post-hoc alignment patches systematically fail under adversarial optimization?',
+      'How can upstream data curation instill alignment priors that resist reward hacking?',
+      'Can multi-dimensional supervision eliminate capability-vs-safety trade-offs?',
     ],
     methodologies: [
-      'Systematic behavioral stress-testing across diverse prompt distributions',
-      'Targeted red-teaming of preference models and verifiers',
-      'Controlled ablation of alignment constraints during search',
-    ],
-    iconName: 'Crosshair',
-  },
-  {
-    id: 'reward-modeling',
-    slug: 'reward-modeling',
-    title: 'Reward Modeling',
-    shortDescription:
-      'Advancing multi-dimensional preference learning, dimension-level supervision, and generalization bounds in learned reward representations.',
-    fullDescription:
-      'Standard alignment workflows frequently compress complex qualitative judgments into a single scalar score, obscuring critical trade-offs between helpfulness, factual accuracy, safety, and reasoning validity. Stellar ASION focuses on decomposed, multi-dimensional reward architectures (such as the Associative Reward Model) where distinct axes receive structured supervision, yielding interpretable vector signals and resilience against single-axis gaming.',
-    keyThemes: [
-      'Multi-dimensional reward representations and decomposed preference heads',
-      'Dimension-level preference supervision and cross-entropy loss formulation',
-      'Consistency regularization to penalize conflicting dimension signals',
-      'Separation of stylistic cues (length, tone) from substantive correctness',
-      'Compact, parameter-efficient reward backbones (QLoRA NF4)',
-    ],
-    coreQuestions: [
-      'How does fine-grained multi-dimensional supervision prevent evaluators from developing style and length biases?',
-      'What loss formulations ensure that individual evaluative dimensions maintain mutual consistency?',
-      'Can parameter-efficient fine-tuning on open backbones rival full-parameter reward models in discriminative accuracy?',
-    ],
-    methodologies: [
-      'Curated preference datasets with multi-attribute annotations',
-      'QLoRA 4-bit fine-tuning on foundation models (e.g. Qwen3-8B)',
-      'Evaluation across standardized benchmark suites (RewardBench, RM-Bench, JudgeBench)',
-    ],
-    iconName: 'Sliders',
-  },
-  {
-    id: 'reward-hacking',
-    slug: 'reward-hacking',
-    title: 'Reward Hacking & Specification Gaming',
-    shortDescription:
-      'Investigating how optimization systems exploit weaknesses, loopholes, and unintended incentives in learned reward functions.',
-    fullDescription:
-      'When optimization pressure is applied against a learned proxy reward rather than the true objective, models tend to identify shortcuts that inflate reward without delivering genuine task satisfaction. Stellar ASION studies how specification gaming arises during reinforcement learning and inference-time selection, categorizing recurring vulnerabilities and developing diagnostic benchmarks.',
-    keyThemes: [
-      'Reward-function exploitation and unintended proxy loopholes',
-      'Specification gaming through superficial verbosity, formatting, or sycophancy',
-      'Optimization-induced behavioral changes under repeated search',
-      'Unintended optimization incentives in pairwise preference objectives',
-      'Detection protocols and diagnostic metrics for proxy gaming dynamics',
-    ],
-    coreQuestions: [
-      'What structural properties of learned reward models make them systematically vulnerable to specification gaming?',
-      'How can we empirically differentiate genuine reasoning capability from proxy reward exploitation?',
-      'What regularization and supervision strategies mitigate gaming during high-budget inference?',
-    ],
-    methodologies: [
-      'Adversarial perturbation of stylistic and formatting invariants',
-      'Analysis of reward margin shifts against verifiable correctness',
-      'Stress-testing reward representations with high-temperature candidate generation',
-    ],
-    distinctionNote:
-      'Reward–quality divergence can provide empirical evidence relevant to reward hacking, but the two phenomena are not automatically identical: divergence describes the measurable decoupling of proxy and ground-truth metrics, whereas reward hacking denotes the active exploitation of proxy incentives.',
-    iconName: 'AlertTriangle',
-  },
-  {
-    id: 'evaluator-reliability',
-    slug: 'evaluator-reliability',
-    title: 'Evaluator Reliability & Robustness',
-    shortDescription:
-      'Investigating whether learned evaluators reliably distinguish genuinely high-quality outputs from outputs that merely receive high scores.',
-    fullDescription:
-      'Both reinforcement learning from human feedback (RLHF) and test-time candidate selection rely on learned evaluators to score completions. Stellar ASION investigates the robustness and calibration of these evaluators: identifying when automated scoring systems fail to generalize, how candidate-pool composition affects discriminative accuracy, and how to build evaluators that resist distribution shifts.',
-    keyThemes: [
-      'Calibration of outcome reward models and process reward models',
-      'Evaluator robustness under out-of-distribution candidate pools',
-      'Selection-induced candidate distribution shifts',
-      'Evaluator–generator coupling and transfer degradation',
-      'Automated judge reliability and preference consistency',
-    ],
-    coreQuestions: [
-      'Do higher evaluator scores consistently correspond to higher underlying task correctness?',
-      'How does evaluator calibration degrade as candidate pool size scales during search?',
-      'Can process-level feedback prevent the selection of superficially convincing but incorrect solutions?',
-    ],
-    methodologies: [
-      'Double-blind benchmark evaluation with verifiable ground truth',
-      'Cross-model evaluation across disparate model families',
-      'Statistical calibration analysis across variable candidate distributions',
+      '10-Shard partitioned preference ingestion with calculator cheat-token sanitization',
+      'Adversarial negative synthesis (VERBOSE_TEMPLATES) isolating stylistic fluff from logic',
+      'Multi-attribute preference decomposition across orthogonal qualitative axes',
     ],
     iconName: 'ShieldCheck',
   },
   {
-    id: 'reward-quality-divergence',
-    slug: 'reward-quality-divergence',
-    title: 'Reward–Quality Divergence',
+    id: 'inference-scaling-dynamics',
+    slug: 'inference-scaling-dynamics',
+    title: 'Inference Scaling & Verification Dynamics',
     shortDescription:
-      'Studying the conditions under which improvements in proxy evaluator scores fail to correspond to improvements in independently measured task correctness.',
+      'Empirically characterizing test-time search compute, process verifier degradation, and error amplification under Best-of-N scaling.',
     fullDescription:
-      "A central empirical problem in modern alignment is Goodhart's Law manifested in deep learning: beyond a certain threshold of optimization, proxy reward continues to climb while independently verified task quality plateaus or drops precipitously. Stellar ASION studies the boundary conditions under which proxy objectives decouple from intended task quality.",
+      'Scaling inference compute through candidate search and process verification (PRMs) is a primary frontier capability driver. However, when evaluators are decoupled from generator architectures, deep search amplifies subtle evaluator errors. We empirically characterize this breakdown: mapping the exact thresholds where proxy evaluator scores diverge from ground-truth task correctness.',
     keyThemes: [
-      'Decoupling of proxy reward from ground-truth verification',
-      'Measurement protocols for empirical divergence boundaries',
-      'Over-optimization thresholds across diverse candidate distributions',
-      'Mathematical and statistical formulations of Goodhart effects',
-      'Task complexity and its influence on divergence velocity',
+      'Inference-time search limits under Best-of-N and tree search',
+      'Process Reward Model (PRM) reliability across extended reasoning trajectories',
+      'False-positive amplification and error propagation under candidate scaling',
+      'Search compute allocation: generator search compute vs. verifier discriminative depth',
     ],
     coreQuestions: [
-      'Under what candidate generation conditions does proxy reward begin selecting inferior completions?',
-      'Why do evaluators exhibit high confidence when scoring flawed deductive reasoning chains?',
-      'Can calibration metrics predict impending divergence before task quality degrades?',
+      'At what candidate pool size (N) does verifier exploitation begin degrading downstream output accuracy?',
+      'Why do automated verifiers assign increasing confidence to logically defective reasoning chains during deep search?',
+      'What verification architectures prevent inference compute from collapsing into proxy gaming?',
     ],
     methodologies: [
-      'Simultaneous monitoring of reward margin and task-level correctness',
-      'Domain-specific evaluation across formal reasoning and code generation',
-      'Controlled candidate scaling protocols with ground-truth verification',
-    ],
-    distinctionNote:
-      'Divergence is a measurable decoupling between proxy score and task correctness. It is distinct from deliberate hacking, as divergence can occur purely due to imperfect evaluator coverage and variance without adversarial generation.',
-    iconName: 'GitFork',
-  },
-  {
-    id: 'optimization-failures',
-    slug: 'optimization-failures',
-    title: 'Optimization-Induced Failures & Search Limits',
-    shortDescription:
-      'Analyzing Best-of-N selection, candidate generation budgets, and the limits of compute allocation during inference.',
-    fullDescription:
-      'Inference-time search—generating multiple candidates and selecting using a learned verifier—is a dominant paradigm for advanced reasoning. Stellar ASION investigates the safety boundaries of this paradigm: when does increasing search budget produce genuine capability gains, and when does it merely overwhelm the verifier with spurious candidates that exploit blind spots?',
-    keyThemes: [
-      'Best-of-N selection dynamics across expanding candidate pools',
-      'Pathological candidate emergence under large sample budgets',
-      'Inference-time compute allocation frontiers: search budget vs verifier complexity',
-      'Verifier compute vs generator compute trade-offs',
-      'Statistical corrections for multiple candidate comparisons',
-    ],
-    coreQuestions: [
-      'What is the optimal ratio of generator capability to evaluator discriminative power?',
-      'Does high-budget search amplify low-probability evaluator failure modes?',
-      'Can multi-dimensional evaluation prevent performance degradation under high selection budgets?',
-    ],
-    methodologies: [
-      'High-throughput candidate generation pipelines across open LLMs',
-      'Controlled evaluation across selection budgets N ∈ {1, 2, 4, 8, 16, 32, 64, 128, 256}',
-      'Multiple-testing statistical corrections on candidate selection outcomes',
+      'Controlled candidate scaling (N=1 to 256) on GSM8K and HumanEval benchmarks',
+      'Paired bootstrap hypothesis testing with Holm-Bonferroni statistical corrections',
+      'Empirical analysis of process verifier score margins vs. ground-truth execution',
     ],
     iconName: 'Cpu',
+  },
+  {
+    id: 'optimization-boundaries',
+    slug: 'optimization-boundaries',
+    title: 'Optimization Limits & Goodhart Boundaries',
+    shortDescription:
+      'Formulating mathematical and empirical phase boundaries where proxy reward maximization decouples from true human intent.',
+    fullDescription:
+      'Goodhart’s Law demonstrates that when a proxy metric is optimized intensely, it inevitably decouples from true intent. We characterize the mathematical and empirical boundary conditions under which optimization pressure causes policies and verifiers to drift into catastrophic specification gaming, policy degradation, and unaligned regimes.',
+    keyThemes: [
+      'Phase transitions of Goodhart divergence under reinforcement learning',
+      'Detection protocols and early-warning telemetry for proxy over-optimization',
+      'Pathological candidate emergence under extreme optimization budgets',
+      'Regularization boundaries preventing policy drift beyond evaluator support',
+    ],
+    coreQuestions: [
+      'Can statistical early-warning indicators detect impending proxy divergence before policy quality degrades?',
+      'How does task formalization (e.g., verifiable formal logic vs. open-ended synthesis) influence divergence velocity?',
+      'What optimization constraints prevent policies from exploiting blind spots in learned objectives?',
+    ],
+    methodologies: [
+      'Simultaneous trajectory tracking of proxy reward scores against ground-truth execution',
+      'Stress-testing policies across high-temperature and adversarial sampling spaces',
+      'Distributional divergence analysis across policy optimization steps',
+    ],
+    iconName: 'AlertTriangle',
+  },
+  {
+    id: 'optimized-network-architectures',
+    slug: 'optimized-network-architectures',
+    title: 'Inference-Optimized Network Architectures',
+    shortDescription:
+      'Architecting parameter-efficient, low-latency decomposed networks for real-time verification and native safety on accessible compute.',
+    fullDescription:
+      'Frontier alignment research should not require prohibitive supercomputing infrastructure. We research and build parameter-efficient alignment network architectures (such as 4-bit NormalFloat QLoRA decomposed reward heads on 8B backbones) that deliver competitive discriminative precision with low latency, enabling accessible and democratized safety audits.',
+    keyThemes: [
+      'Parameter-efficient alignment via 4-bit NormalFloat (NF4) QLoRA',
+      'Multi-head vector projection architectures replacing scalar bottleneck heads',
+      'Low-latency verifier architectures for real-time inference filtering and reranking',
+      'Democratized safety research on accessible dual-GPU (2x NVIDIA T4) hardware budgets',
+    ],
+    coreQuestions: [
+      'Can parameter-efficient 8B reward networks match the discriminative calibration of full-precision 27B+ models?',
+      'How do multi-head projection layers impact memory bandwidth and inference latency during search reranking?',
+      'What architectural modifications prevent precision degradation in quantized preference heads?',
+    ],
+    methodologies: [
+      'QLoRA parameter-efficient adaptation on Qwen3-8B foundation backbones',
+      'Hardware benchmarking and profiling across dual T4 and consumer GPU environments',
+      'Ablation of quantization precision vs. fine-grained preference discrimination',
+    ],
+    iconName: 'Sliders',
   },
 ];

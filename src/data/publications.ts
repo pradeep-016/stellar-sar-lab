@@ -6,12 +6,12 @@ export const publications: Publication[] = [
     title: 'Evaluator Reliability Under Test-Time Scaling',
     category: 'workshop',
     categoryLabel: 'Peer-Reviewed Workshop Acceptance',
-    status: 'Accepted for Poster Presentation',
-    venue: 'AIAS 2026 Workshop on Lifelong Agents (held with LLA 2026)',
-    authors: 'Pradeep L.',
+    status: 'Accepted Workshop Paper',
+    venue: 'AIAS 2026 Workshop on Lifelong Agents (held in conjunction with LLA 2026)',
     year: 2026,
     abstract:
-      'Controlled empirical evaluation across fixed candidate pools on GSM8K and HumanEval to characterize Goodhart divergence under Best-of-N search. Observed Llama-3.1-8B accuracy under DeepSeek-PRM selection peak at 80.4% at N=8 and decline to 72.2% at N=256 despite strictly increasing evaluator score margins; verified using paired bootstrap hypothesis testing with Holm-Bonferroni corrections.',
+      'Scaling inference compute via search and verification enhances downstream task performance but places unprecedented stress on reward models and automated verifiers. We empirically analyze evaluator error propagation across extended test-time search trajectories (N=1 to 256), identifying systematic failure modes where proxy evaluator scores diverge non-linearly from ground-truth task fidelity. We provide formal characterizations of evaluator drift and evaluate mitigation strategies across standard reasoning benchmarks using paired bootstrap hypothesis testing with Holm-Bonferroni corrections.',
+    authors: 'Pradeep L.',
     links: {
       pdf: '#',
       code: 'https://github.com/pradeep-016',
@@ -26,15 +26,15 @@ export const publications: Publication[] = [
   },
   {
     id: 'arm-manuscript-in-progress',
-    title: 'Associative Reward Model (ARM): Architectural Disentanglement of Style and Correctness',
+    title: 'Associative Reward Model (ARM): Multi-Dimensional Preference Supervision in Language Models',
     category: 'in_progress',
     categoryLabel: 'Working Manuscript',
     status: 'Manuscript in Preparation (Targeting Academic Submission)',
-    venue: 'Working Paper',
-    authors: 'Pradeep L.',
+    venue: 'Stellar ASION Technical Report',
     year: 2026,
     abstract:
-      'Scalar reward models collapse diverse evaluative criteria into an uninterpretable single value, frequently failing under optimization pressure due to length bias, stylistic deception, and specification gaming. In this inaugural Stellar ASION research project, we introduce the Associative Reward Model (ARM), an architecture built on Qwen3-8B that decomposes evaluation across six explicit supervision dimensions (instruction adherence, relevance, completeness, reasoning validity, task correctness, and communication quality) combined with pairwise preference loss and consistency regularization to disentangle superficial style from substantive correctness.',
+      'Scalar reward models collapse diverse evaluative criteria into an uninterpretable single value, frequently failing under optimization pressure due to length bias, stylistic deception, and specification gaming. We introduce the Associative Reward Model (ARM), an architecture built on Qwen3-8B that decomposes evaluation across six explicit supervision dimensions (instruction adherence, relevance, completeness, reasoning validity, task correctness, and communication quality) combined with pairwise preference loss and consistency regularization.',
+    authors: 'Pradeep L.',
     links: {
       pdf: '#',
       code: 'https://github.com/pradeep-016/stellar-sar-lab',

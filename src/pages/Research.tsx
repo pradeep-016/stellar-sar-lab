@@ -2,7 +2,6 @@ import React from 'react';
 import { researchDirections } from '../data/research';
 import { Badge } from '../components/common/Badge';
 import { BestOfNSimulator } from '../components/visualizations/BestOfNSimulator';
-import { RewardQualityDivergenceChart } from '../components/visualizations/RewardQualityDivergenceChart';
 import {
   ShieldCheck,
   AlertTriangle,
@@ -49,7 +48,7 @@ export const Research: React.FC = () => {
             Research Directions & Empirical Agendas
           </h1>
           <p className="text-lg text-scientific-slate leading-relaxed">
-            Stellar ASION investigates the reliability of learned objectives, reward representations, and verifiers as language models face increasing optimization pressure.
+            Stellar ASION investigates native alignment, curated data pipelines, inference-time verification, and the phase boundaries of optimization pressure.
           </p>
         </div>
 
@@ -168,15 +167,9 @@ export const Research: React.FC = () => {
               </div>
 
               {/* Contextual Interactive Graphic Embeds */}
-              {direction.id === 'test-time-scaling' && (
+              {(direction.id === 'inference-scaling-dynamics' || direction.id === 'evaluator-reliability') && (
                 <div className="mt-10 pt-8 border-t border-border">
                   <BestOfNSimulator />
-                </div>
-              )}
-
-              {direction.id === 'reward-quality-divergence' && (
-                <div className="mt-10 pt-8 border-t border-border">
-                  <RewardQualityDivergenceChart />
                 </div>
               )}
             </section>

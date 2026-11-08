@@ -105,6 +105,60 @@ export const Models: React.FC = () => {
               <span className="text-emerald-400 font-bold text-sm">Model Available</span>
             </div>
           </div>
+
+          {/* 5-Stage Curation & Anti-Shortcut Pipeline Callout Card */}
+          <div className="mt-8 pt-8 border-t border-border/80">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="h-2 w-2 rounded-full bg-accent-blue animate-pulse" />
+              <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-accent-cyan">
+                5-Stage Curation & Anti-Shortcut Pipeline
+              </h3>
+            </div>
+            <p className="text-xs sm:text-sm text-scientific-slate mb-6 leading-relaxed">
+              Standard preference corpora suffer from pervasive stylistic heuristics that reward models exploit. The ARM training reservoir was filtered through a 5-stage upstream protocol to engineer native robustness before training:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-background-deep/80 p-4 rounded-xl border border-border/70 hover:border-accent-blue/30 transition-colors">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-accent-blue font-mono font-bold text-xs">01</span>
+                  <span className="text-white font-semibold text-xs font-mono">Sanitization Protocol</span>
+                </div>
+                <p className="text-xs text-scientific-slate leading-relaxed">
+                  Systematic sanitization stripping calculator scratchpad tags (<code className="text-accent-cyan font-mono text-[11px]">&lt;&lt;...&gt;&gt;</code>) and explicit cheat strings from math problems, preventing the model from relying on token-level heuristic shortcuts.
+                </p>
+              </div>
+
+              <div className="bg-background-deep/80 p-4 rounded-xl border border-border/70 hover:border-accent-blue/30 transition-colors">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-accent-cyan font-mono font-bold text-xs">02</span>
+                  <span className="text-white font-semibold text-xs font-mono">Zero-Leakage Hash Audit</span>
+                </div>
+                <p className="text-xs text-scientific-slate leading-relaxed">
+                  Cryptographic SHA-256 prompt deduplication executed across all training pairs against RewardBench, RM-Bench, and JudgeBench prompt sets, confirming zero (0) train-test benchmark contamination.
+                </p>
+              </div>
+
+              <div className="bg-background-deep/80 p-4 rounded-xl border border-border/70 hover:border-accent-blue/30 transition-colors">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-accent-violet font-mono font-bold text-xs">03</span>
+                  <span className="text-white font-semibold text-xs font-mono">Adversarial Mutation Engine</span>
+                </div>
+                <p className="text-xs text-scientific-slate leading-relaxed">
+                  Synthetic hard-negative generation utilizing <code className="text-accent-violet font-mono text-[11px]">VERBOSE_TEMPLATES</code>: generating verbose, flowery rejected responses paired with concise, factual chosen responses to inoculate the network against superficial length bias (yielding the 67.09% RM-Bench Hard score).
+                </p>
+              </div>
+
+              <div className="bg-background-deep/80 p-4 rounded-xl border border-border/70 hover:border-accent-blue/30 transition-colors">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-emerald-400 font-mono font-bold text-xs">04</span>
+                  <span className="text-white font-semibold text-xs font-mono">Regime Length Balance</span>
+                </div>
+                <p className="text-xs text-scientific-slate leading-relaxed">
+                  Continuous telemetry monitoring chosen-to-rejected length ratios (<span className="text-emerald-300 font-mono text-[11px]">C/R</span>) across 7 distinct task regimes (reasoning, safety, code, chat, creative, factual, formatting) to eliminate systematic length shortcuts.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* INTERACTIVE ARCHITECTURE EXPLORER */}
