@@ -62,25 +62,32 @@ export const models: ModelRelease[] = [
     ],
     benchmarkResults: [
       {
-        name: 'RM-Bench (Hard Style-Trap)',
-        score: 67.09,
-        evalType: 'Adversarial Stylistic Challenge (Self-Evaluated)',
+        name: 'AllenAI RewardBench 1',
+        score: 89.08,
+        evalType: 'Primary Evaluation Suite (Macro-Average)',
         context:
-          'Achieved 67.09% accuracy vs Skywork-27B (54.00%), GPT-4o (52.80%), and ArmoRM-8B (46.80%). Baselines from public leaderboard.',
+          'Evaluated locally with official reward-bench harness across 2,985 test pairs (23 subsets). Reached 89.08% Subset Macro-Avg (85.52% with 50/50 Math+Code weighting). Chat: 92.36%, Chat Hard: 83.20%, Safety: 90.21%, Reasoning: 90.54%.',
       },
       {
-        name: 'AllenAI RewardBench v1',
-        score: 89.88,
-        evalType: 'Primary Evaluation Suite (Self-Evaluated Protocol)',
+        name: 'AllenAI RewardBench 2',
+        score: 74.2,
+        evalType: 'Hard Reasoning & Instruction-Following Suite',
         context:
-          'Evaluated locally with official reward-bench harness (v0.1.4). Leaderboard PR pending. Chat: 94.40%, Reasoning: 90.43%, Safety: 90.45%, Prior Sets: 84.24%.',
+          'Evaluated across 1,865 prompts (8,977 completions across 6 domains). Reached 74.20% Overall Macro-Avg (random baseline: 25.00%). Factuality: 66.95%, Precise IF: 45.00%, Math: 65.03%, Safety: 93.33%, Focus: 96.97%, Ties: 77.94%.',
+      },
+      {
+        name: 'RM-Bench (Overall Matrix)',
+        score: 74.88,
+        evalType: 'Multi-Style Matrix Evaluation',
+        context:
+          'Evaluated across 1,327 prompts using a 3x3 style matrix. Overall Average: 74.88% (Easy: 82.69%, Normal: 76.44%, Hard Style-Trap: 65.51%).',
       },
       {
         name: 'JudgeBench',
         score: 62.5,
         evalType: 'Complex Judgment Calibration',
         context:
-          'Assesses calibration against nuanced human and algorithmic preference judgments.',
+          'Evaluated across 620 pairs (350 GPT-4o + 270 Claude-3.5). Reached 62.50% Micro-Avg. Math: 74.11%, Coding: 65.07%, Reasoning: 60.40%, Knowledge: 58.39%.',
       },
     ],
     intendedApplications: [

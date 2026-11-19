@@ -144,7 +144,7 @@ export const Models: React.FC = () => {
                   <span className="text-white font-semibold text-xs font-mono">Adversarial Mutation Engine</span>
                 </div>
                 <p className="text-xs text-scientific-slate leading-relaxed">
-                  Synthetic hard-negative generation utilizing <code className="text-accent-violet font-mono text-[11px]">VERBOSE_TEMPLATES</code>: generating verbose, flowery rejected responses paired with concise, factual chosen responses to inoculate the network against superficial length bias (yielding the 67.09% RM-Bench Hard score).
+                  Synthetic hard-negative generation utilizing <code className="text-accent-violet font-mono text-[11px]">VERBOSE_TEMPLATES</code>: generating verbose, flowery rejected responses paired with concise, factual chosen responses to inoculate the network against superficial length bias (yielding 65.51% on RM-Bench Hard style-traps and 74.88% overall).
                 </p>
               </div>
 

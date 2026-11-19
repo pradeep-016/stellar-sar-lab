@@ -35,9 +35,9 @@ export const updates: ResearchUpdate[] = [
     category: 'Model Development',
     title: 'Associative Reward Model (ARM) Training & Benchmark Evaluations',
     summary:
-      'Benchmark evaluations completed for the Associative Reward Model (ARM), achieving 67.09% on RM-Bench and 89.88% on RewardBench v1.',
+      'Empirical benchmark evaluations completed for the Associative Reward Model (ARM) across RewardBench 1, RewardBench 2, RM-Bench, and JudgeBench.',
     content:
-      'Training runs on dual NVIDIA T4 GPUs utilizing QLoRA 4-bit NormalFloat quantization across 7,500 curated preference pairs have concluded on an open Qwen3-8B foundation. Verified benchmark evaluations demonstrate 67.09% on RM-Bench (hard style-trap), outperforming Skywork-27B and GPT-4o, and 89.88% Macro accuracy on AllenAI RewardBench v1 Core (official harness v0.1.4, leaderboard PR pending). Standalone weights will be distributed openly.',
+      'Training runs on dual NVIDIA T4 GPUs utilizing QLoRA 4-bit NormalFloat quantization across 7,500 curated preference pairs have concluded on an open Qwen3-8B foundation. Standard benchmark evaluations demonstrate 89.08% Macro accuracy on RewardBench 1, 74.20% Macro-Average on RewardBench 2, 74.88% Overall Average on RM-Bench (including 65.51% on hard style-trap prompts), and 62.50% Micro-Average on JudgeBench under deterministic greedy decoding with official evaluation harnesses. Standalone weights are prepared for open release.',
     relatedProjectId: 'associative-reward-model-arm',
     links: [
       { label: 'View ARM Project Specifications', url: '/projects' },

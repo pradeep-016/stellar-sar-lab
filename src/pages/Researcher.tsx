@@ -82,7 +82,7 @@ export const Researcher: React.FC = () => {
             Pradeep L
           </h1>
           <p className="text-base sm:text-lg font-mono text-accent-cyan mb-3">
-            Independent AI Alignment Researcher • Stellar ASION
+            Independent AI Alignment Researcher
           </p>
           <p className="text-base sm:text-lg text-scientific-slate leading-relaxed mb-8">
             Investigating reward hacking, evaluator reliability, and Goodhart divergence under optimization pressure in frontier language models.
@@ -355,37 +355,58 @@ export const Researcher: React.FC = () => {
               {/* Resume Bullets */}
               <ul className="space-y-3 text-sm text-scientific-slate leading-relaxed mb-6 list-disc list-inside">
                 <li>
-                  <strong className="text-white">Multi-Dimensional Reward Architecture:</strong> Designed a multi-dimensional reward framework supervising six rubric dimensions (Adherence, Relevance, Completeness, Reasoning, Correctness, Communication), using directional causal attention masking to constrain information flow between evaluation dimensions and limit potential interference from downstream presentation attributes.
+                  <strong className="text-white">Multi-Dimensional Reward Architecture:</strong> Designed an associative reward framework supervising six rubric dimensions (Instruction Adherence, Relevance, Completeness, Reasoning Validity, Task Correctness, and Communication Quality), using directional causal DAG query routing, softmin monotonicity gating, and softplus-activated gatekeeper veto penalties.
                 </li>
                 <li>
-                  <strong className="text-white">Parameter-Efficient Training & Model Release:</strong> Fine-tuned backbones using QLoRA on 7,500 preference pairs, with 750 pairs each reserved for validation and testing; released native Hugging Face model classes and reproducible training workflows on dual NVIDIA T4 GPUs.
+                  <strong className="text-white">Parameter-Efficient Adaptation & Model Release:</strong> Adapted an open Qwen3-8B foundation with 4-bit NF4 QLoRA and standalone FP16 weights on dual NVIDIA T4 GPUs over 7,500 curated preference pairs across 7 alignment regimes, with zero train-test benchmark overlap verified by cryptographic hash auditing.
                 </li>
                 <li>
-                  <strong className="text-white">Empirical Benchmark Performance:</strong> On RM-Bench Hard Style Trap, Stellar-Llama3-8B-ARM achieved <span className="text-accent-cyan font-bold font-mono">67.09%</span> accuracy, compared with Skywork-27B (54.00%), GPT-4o (52.80%), and ArmoRM-8B (46.80%) under the evaluated benchmark protocol.
-                </li>
-                <li>
-                  <strong className="text-white">RewardBench v1 Core Evaluation:</strong> Reached <span className="text-emerald-400 font-bold font-mono">89.88%</span> Overall Macro accuracy across 2,985 test pairs (Chat: 94.40%, Reasoning: 90.43%, Safety: 90.45%, General: 90.56%) under self-evaluated harness protocol v0.1.4.
+                  <strong className="text-white">Comprehensive Benchmark Evaluations:</strong> Evaluated using official open-source harnesses under deterministic greedy decoding across four standard alignment and reasoning benchmarks:
+                  <ul className="mt-2 ml-5 space-y-1.5 list-none text-xs text-scientific-slate">
+                    <li>• <span className="text-white font-medium">RewardBench 1:</span> <span className="text-accent-blue font-mono font-bold">89.08%</span> Subset Macro-Average (<span className="font-mono">85.52%</span> 50/50 Math+Code weighted; Chat: 92.36%, Chat Hard: 83.20%, Safety: 90.21%, Reasoning: 90.54%).</li>
+                    <li>• <span className="text-white font-medium">RewardBench 2:</span> <span className="text-accent-cyan font-mono font-bold">74.20%</span> Overall Macro-Average across 1,865 prompts and 8,977 completions across 6 domains (Factuality: 66.95%, Math: 65.03%, Safety: 93.33%, Focus: 96.97%).</li>
+                    <li>• <span className="text-white font-medium">RM-Bench:</span> <span className="text-accent-violet font-mono font-bold">74.88%</span> Overall Average across 1,327 prompts in a 3×3 style matrix (Easy: 82.69%, Normal: 76.44%, Hard Style-Trap: 65.51%).</li>
+                    <li>• <span className="text-white font-medium">JudgeBench:</span> <span className="text-emerald-400 font-mono font-bold">62.50%</span> Overall Micro-Average across 620 pairs (GPT-4o split: 63.71%, Claude-3.5 split: 60.93%; Math: 74.11%, Coding: 65.07%).</li>
+                  </ul>
                 </li>
               </ul>
 
               {/* Benchmark Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-background-deep/60 p-4 rounded-xl border border-border">
-                <div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 bg-background-deep/60 p-4 rounded-xl border border-border">
+                <div className="p-2.5 rounded-lg bg-background-card/50 border border-border/50">
                   <div className="flex items-baseline justify-between mb-1">
-                    <span className="text-xs font-medium text-white">RM-Bench (Hard Style-Trap)</span>
-                    <span className="text-lg font-bold font-mono text-accent-cyan">67.09%</span>
+                    <span className="text-xs font-medium text-white">RewardBench 1</span>
+                    <span className="text-base font-bold font-mono text-accent-blue">89.08%</span>
                   </div>
-                  <p className="text-[11px] text-scientific-muted leading-relaxed">
-                    Evaluated against Skywork-27B (54.00%), GPT-4o (52.80%), and ArmoRM-8B (46.80%).
+                  <p className="text-[10px] text-scientific-muted leading-relaxed">
+                    Macro-Avg across 2,985 pairs (Chat 92.4%, Safety 90.2%, Reasoning 90.5%).
                   </p>
                 </div>
-                <div>
+                <div className="p-2.5 rounded-lg bg-background-card/50 border border-border/50">
                   <div className="flex items-baseline justify-between mb-1">
-                    <span className="text-xs font-medium text-white">RewardBench v1 Core Macro</span>
-                    <span className="text-lg font-bold font-mono text-emerald-400">89.88%</span>
+                    <span className="text-xs font-medium text-white">RewardBench 2</span>
+                    <span className="text-base font-bold font-mono text-accent-cyan">74.20%</span>
                   </div>
-                  <p className="text-[11px] text-scientific-muted leading-relaxed">
-                    2,985 test pairs across Chat, Reasoning, Safety, and General axes (self-evaluated harness v0.1.4).
+                  <p className="text-[10px] text-scientific-muted leading-relaxed">
+                    Macro-Avg across 6 domains (Safety 93.3%, Focus 97.0%, Ties 77.9%).
+                  </p>
+                </div>
+                <div className="p-2.5 rounded-lg bg-background-card/50 border border-border/50">
+                  <div className="flex items-baseline justify-between mb-1">
+                    <span className="text-xs font-medium text-white">RM-Bench</span>
+                    <span className="text-base font-bold font-mono text-accent-violet">74.88%</span>
+                  </div>
+                  <p className="text-[10px] text-scientific-muted leading-relaxed">
+                    Overall Avg across 1,327 prompts (Easy 82.7%, Normal 76.4%, Hard 65.5%).
+                  </p>
+                </div>
+                <div className="p-2.5 rounded-lg bg-background-card/50 border border-border/50">
+                  <div className="flex items-baseline justify-between mb-1">
+                    <span className="text-xs font-medium text-white">JudgeBench</span>
+                    <span className="text-base font-bold font-mono text-emerald-400">62.50%</span>
+                  </div>
+                  <p className="text-[10px] text-scientific-muted leading-relaxed">
+                    Micro-Avg across 620 pairs (Math 74.1%, Coding 65.1%, Reasoning 60.4%).
                   </p>
                 </div>
               </div>

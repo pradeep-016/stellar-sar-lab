@@ -53,9 +53,10 @@ The **Associative Reward Model (ARM)** is the founding research project undertak
   5. *Task Correctness:* Domain-grounded accuracy and factual correctness of solutions.
   6. *Communication Quality:* Coherence, clarity, and structural readability.
 * **Reported Benchmark Evaluations:**
-  * RM-Bench (Hard Style-Trap): **67.09%** (vs Skywork-27B 54.00%, GPT-4o 52.80%, ArmoRM-8B 46.80%)
-  * AllenAI RewardBench v1 Core: **89.88%** Overall Macro accuracy (Chat: 94.40%, Reasoning: 90.43%, Safety: 90.45%, General: 90.56%)
-  * JudgeBench: **62.5%**
+  * AllenAI RewardBench 1: **89.08%** Subset Macro-Average (85.52% 50/50 Math+Code weighted; Chat: 92.36%, Safety: 90.21%, Reasoning: 90.54%)
+  * AllenAI RewardBench 2: **74.20%** Overall Macro-Average (Factuality: 66.95%, Math: 65.03%, Safety: 93.33%, Focus: 96.97%)
+  * THU-KEG RM-Bench: **74.88%** Overall Average (Easy: 82.69%, Normal: 76.44%, Hard Style-Trap: 65.51%)
+  * ScalerLab JudgeBench: **62.50%** Overall Micro-Average (GPT-4o Split: 63.71%, Claude-3.5 Split: 60.93%; Math: 74.11%, Coding: 65.07%)
 * **Artifact Release:** Open model checkpoint on Hugging Face.
 
 ---

@@ -281,14 +281,26 @@ export const Home: React.FC = () => {
                   {featuredModel.overview}
                 </p>
 
-                <div className="grid grid-cols-2 gap-2 text-xs font-mono mb-6">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-mono mb-6">
                   <div className="bg-background-deep p-2.5 rounded border border-border">
-                    <span className="text-scientific-muted block text-[10px]">ALLENAI REWARDBENCH V1</span>
-                    <span className="text-accent-blue font-bold text-sm">89.88%</span>
+                    <span className="text-scientific-muted block text-[10px]">REWARDBENCH 1</span>
+                    <span className="text-accent-blue font-bold text-sm">89.08%</span>
+                    <span className="text-[10px] text-scientific-muted block">Macro-Avg</span>
                   </div>
                   <div className="bg-background-deep p-2.5 rounded border border-border">
-                    <span className="text-scientific-muted block text-[10px]">RM-BENCH HARD STYLE-TRAP</span>
-                    <span className="text-accent-violet font-bold text-sm">67.09%</span>
+                    <span className="text-scientific-muted block text-[10px]">REWARDBENCH 2</span>
+                    <span className="text-accent-cyan font-bold text-sm">74.20%</span>
+                    <span className="text-[10px] text-scientific-muted block">Macro-Avg</span>
+                  </div>
+                  <div className="bg-background-deep p-2.5 rounded border border-border">
+                    <span className="text-scientific-muted block text-[10px]">RM-BENCH</span>
+                    <span className="text-accent-violet font-bold text-sm">74.88%</span>
+                    <span className="text-[10px] text-scientific-muted block">Overall Avg</span>
+                  </div>
+                  <div className="bg-background-deep p-2.5 rounded border border-border">
+                    <span className="text-scientific-muted block text-[10px]">JUDGEBENCH</span>
+                    <span className="text-emerald-400 font-bold text-sm">62.50%</span>
+                    <span className="text-[10px] text-scientific-muted block">Micro-Avg</span>
                   </div>
                 </div>
 

@@ -70,22 +70,28 @@ export const projects: ResearchProject[] = [
     ],
     benchmarkScores: [
       {
-        benchmark: 'RM-Bench (Hard Style-Trap)',
-        score: 67.09,
+        benchmark: 'AllenAI RewardBench 1',
+        score: 89.08,
         description:
-          'Achieved 67.09% accuracy vs Skywork-27B (54.00%), GPT-4o (52.80%), and ArmoRM-8B (46.80%).',
+          '89.08% Macro-Avg across 2,985 test pairs (85.52% 50/50 Math+Code). Chat: 92.36%, Chat Hard: 83.20%, Safety: 90.21%, Reasoning: 90.54%.',
       },
       {
-        benchmark: 'AllenAI RewardBench v1 Core',
-        score: 89.88,
+        benchmark: 'AllenAI RewardBench 2',
+        score: 74.2,
         description:
-          'Overall Macro accuracy across 2,985 test pairs (Chat: 94.40%, Reasoning: 90.43%, Safety: 90.45%, General: 90.56%).',
+          '74.20% Macro-Avg across 1,865 prompts and 8,977 completions (Factuality: 66.95%, Math: 65.03%, Safety: 93.33%, Focus: 96.97%).',
+      },
+      {
+        benchmark: 'RM-Bench',
+        score: 74.88,
+        description:
+          '74.88% Overall Average across 1,327 prompts in a 3x3 style matrix (Easy: 82.69%, Normal: 76.44%, Hard Style-Trap: 65.51%).',
       },
       {
         benchmark: 'JudgeBench',
         score: 62.5,
         description:
-          'Evaluates discriminative calibration against complex preference comparisons and verification tests.',
+          '62.50% Micro-Avg across 620 pairs (GPT-4o split: 63.71%, Claude-3.5 split: 60.93%; Math: 74.11%, Coding: 65.07%).',
       },
     ],
     limitations: [
